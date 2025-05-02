@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Twitter, Send, Github } from "lucide-react"
+import { Twitter, Send, Github, Phone, Mail, Globe } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -14,7 +14,7 @@ export default function Footer() {
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Link>
-              <Link href="https://t.me/solanaanz" className="text-gray-400 hover:text-white">
+              <Link href="https://t.me/solanaANZ" className="text-gray-400 hover:text-white">
                 <Send className="h-5 w-5" />
                 <span className="sr-only">Telegram</span>
               </Link>
@@ -77,25 +77,27 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-white">
-                  Sponsors
-                </Link>
+              <li className="flex items-center">
+                <Phone className="h-4 w-4 mr-2 text-gray-400" />
+                <span className="text-gray-400">1800 SOLANA</span>
               </li>
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-white">
-                  Partners
-                </Link>
+              <li className="flex items-center">
+                <Mail className="h-4 w-4 mr-2 text-gray-400" />
+                <a href="mailto:info@solanaanz.org" className="text-gray-400 hover:text-white">
+                  info@solanaanz.org
+                </a>
               </li>
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-white">
-                  Contact Us
-                </Link>
+              <li className="flex items-center">
+                <Globe className="h-4 w-4 mr-2 text-gray-400" />
+                <a href="https://solanaANZ.org" className="text-gray-400 hover:text-white">
+                  solanaANZ.org
+                </a>
               </li>
-              <li>
-                <Link href="#" className="text-gray-400 hover:text-white">
-                  Privacy Policy
-                </Link>
+              <li className="flex items-center">
+                <Send className="h-4 w-4 mr-2 text-gray-400" />
+                <a href="https://t.me/solanaANZ" className="text-gray-400 hover:text-white">
+                  t.me/solanaANZ
+                </a>
               </li>
             </ul>
           </div>

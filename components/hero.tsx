@@ -15,7 +15,7 @@ export default function Hero() {
           </p>
           <div className="flex flex-col gap-2 min-[400px]:flex-row">
             <Button size="lg" className="bg-purple-600 hover:bg-purple-700" asChild>
-              <a href="https://t.me/solanaanz" target="_blank" rel="noopener noreferrer">
+              <a href="https://t.me/solanaANZ" target="_blank" rel="noopener noreferrer">
                 Join Telegram
               </a>
             </Button>

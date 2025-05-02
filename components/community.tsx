@@ -17,7 +17,7 @@ export default function Community() {
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100" asChild>
-                <a href="https://t.me/solanaanz" target="_blank" rel="noopener noreferrer">
+                <a href="https://t.me/solanaANZ" target="_blank" rel="noopener noreferrer">
                   Join Telegram
                 </a>
               </Button>

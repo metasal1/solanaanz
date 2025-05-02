@@ -11,6 +11,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Solana ANZ - Australia & New Zealand",
   description: "Your Australian and New Zealand hub for all things Solana",
+  metadataBase: new URL("https://solanaANZ.org"),
     generator: 'v0.dev'
 }
 
