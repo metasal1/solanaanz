@@ -5,6 +5,7 @@ import Community from "@/components/community"
 import Footer from "@/components/footer"
 import Header from "@/components/header"
 import SolPrice from "@/components/sol-price"
+import Sponsors from "@/components/sponsors"
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <SolPrice />
         <About />
         <Events />
+        <Sponsors />
         <Community />
       </main>
       <Footer />
