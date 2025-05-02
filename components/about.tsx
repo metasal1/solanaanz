@@ -1,0 +1,53 @@
+import { Card, CardContent } from "@/components/ui/card"
+import { Users, Calendar, Gift, ShoppingBag } from "lucide-react"
+
+export default function About() {
+  const features = [
+    {
+      icon: <Users className="h-10 w-10 text-purple-600" />,
+      title: "Community",
+      description: "Join the growing Solana community in Australia and New Zealand.",
+    },
+    {
+      icon: <Calendar className="h-10 w-10 text-purple-600" />,
+      title: "Events",
+      description: "Regular meetups, hackathons, and educational events across ANZ.",
+    },
+    {
+      icon: <Gift className="h-10 w-10 text-purple-600" />,
+      title: "Airdrops",
+      description: "Stay updated on the latest Solana ecosystem airdrops.",
+    },
+    {
+      icon: <ShoppingBag className="h-10 w-10 text-purple-600" />,
+      title: "Merchandise",
+      description: "Exclusive Solana ANZ merchandise for community members.",
+    },
+  ]
+
+  return (
+    <section id="about" className="py-16 bg-white">
+      <div className="container px-4 md:px-6">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="space-y-2">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Solana ANZ</h2>
+            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Solana ANZ is your Australian and New Zealand hub for all things Solana
+            </p>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 gap-8 mt-12 md:grid-cols-2 lg:grid-cols-4">
+          {features.map((feature, index) => (
+            <Card key={index} className="border-0 shadow-sm">
+              <CardContent className="flex flex-col items-center space-y-4 p-6">
+                {feature.icon}
+                <h3 className="text-xl font-bold">{feature.title}</h3>
+                <p className="text-muted-foreground text-center">{feature.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

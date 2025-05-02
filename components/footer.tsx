@@ -1,0 +1,112 @@
+import Link from "next/link"
+import { Twitter, Send, Github } from "lucide-react"
+
+export default function Footer() {
+  return (
+    <footer className="bg-gray-900 text-gray-200">
+      <div className="container px-4 py-12 md:px-6">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+          <div className="space-y-4">
+            <h3 className="text-xl font-bold">Solana A/NZ</h3>
+            <p className="text-gray-400">Your Australian and New Zealand hub for all things Solana.</p>
+            <div className="flex space-x-4">
+              <Link href="https://twitter.com/solanaanz" className="text-gray-400 hover:text-white">
+                <Twitter className="h-5 w-5" />
+                <span className="sr-only">Twitter</span>
+              </Link>
+              <Link href="https://t.me/solanaanz" className="text-gray-400 hover:text-white">
+                <Send className="h-5 w-5" />
+                <span className="sr-only">Telegram</span>
+              </Link>
+              <Link href="https://github.com/solana-labs" className="text-gray-400 hover:text-white">
+                <Github className="h-5 w-5" />
+                <span className="sr-only">GitHub</span>
+              </Link>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  Airdrops
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  Events
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  Merch
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  FAQs
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Ecosystem</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="https://solana.com" className="text-gray-400 hover:text-white">
+                  Solana.com
+                </Link>
+              </li>
+              <li>
+                <Link href="https://solana.org" className="text-gray-400 hover:text-white">
+                  Solana Foundation
+                </Link>
+              </li>
+              <li>
+                <Link href="https://soldev.app" className="text-gray-400 hover:text-white">
+                  Solana Developers
+                </Link>
+              </li>
+              <li>
+                <Link href="https://solana.org/grants" className="text-gray-400 hover:text-white">
+                  Grants Program
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  Sponsors
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  Partners
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-400 hover:text-white">
+                  Privacy Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-12 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400">© 2024 Solana ANZ. All rights reserved.</p>
+          <Link href="https://metasal.xyz" className="text-gray-400 hover:text-white mt-4 md:mt-0">
+            metasal.xyz
+          </Link>
+        </div>
+      </div>
+    </footer>
+  )
+}
