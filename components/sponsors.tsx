@@ -1,62 +1,62 @@
-import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 
 export default function Sponsors() {
   const sponsors = [
     {
       name: "Solana Foundation",
-      logo: "/sponsors/solana-foundation.png",
       url: "https://solana.org",
     },
     {
-      name: "Solana",
-      logo: "/sponsors/solana.png",
-      url: "https://solana.com",
-    },
-    {
       name: "Validator.com",
-      logo: "/sponsors/validator.png",
       url: "https://validator.com",
     },
     {
       name: "Flash Trade",
-      logo: "/sponsors/flash-trade.png",
       url: "https://flash.trade",
     },
     {
       name: "The Send Coin",
-      logo: "/sponsors/send-coin.png",
       url: "https://thesendcoin.com",
     },
     {
       name: "Blinks.gg",
-      logo: "/sponsors/blinks.png",
       url: "https://blinks.gg",
     },
     {
       name: "Supa Aggregator",
-      logo: "/sponsors/supa.png",
       url: "https://supa.ag",
     },
     {
       name: "Hey Hal Wallet",
-      logo: "/sponsors/hey-hal.png",
       url: "https://heyhal.xyz",
     },
     {
-      name: "Legions",
-      logo: "/sponsors/legions.png",
-      url: "https://legions.cc",
+      name: "Legion",
+      url: "https://legion.cc",
     },
     {
       name: "Solana Name Service",
-      logo: "/sponsors/sns.png",
       url: "https://sns.id",
     },
     {
-      name: "Alldomains",
-      logo: "/sponsors/alldomains.png",
-      url: "https://all.domains",
+      name: "AllDomains.id",
+      url: "https://alldomains.id",
+    },
+    {
+      name: "Aurascope.app",
+      url: "https://aurascope.app",
+    },
+    {
+      name: "Steak.net",
+      url: "https://steak.net",
+    },
+    {
+      name: "Mnt Capital",
+      url: "https://mtncapital.xyz",
+    },
+    {
+      name: "Menace Finance",
+      url: "https://menace.finance",
     },
   ]
 
@@ -76,15 +76,11 @@ export default function Sponsors() {
             <Card key={sponsor.name} className="border-0 shadow-sm hover:shadow-md transition-shadow">
               <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
                 <CardContent className="flex flex-col items-center justify-center p-6 h-[120px]">
-                  <div className="relative h-12 w-full mb-3">
-                    <Image
-                      src={sponsor.logo || "/placeholder.svg"}
-                      alt={`${sponsor.name} logo`}
-                      fill
-                      className="object-contain"
-                    />
+                  <div className="flex items-center justify-center h-full w-full">
+                    <p className="text-lg font-medium text-center text-purple-600 hover:text-purple-700">
+                      {sponsor.name}
+                    </p>
                   </div>
-                  <p className="text-sm font-medium text-center">{sponsor.name}</p>
                 </CardContent>
               </a>
             </Card>
