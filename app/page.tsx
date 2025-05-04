@@ -6,6 +6,7 @@ import Footer from "@/components/footer"
 import Header from "@/components/header"
 import SolPrice from "@/components/sol-price"
 import Sponsors from "@/components/sponsors"
+import Partners from "@/components/partners"
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <SolPrice />
         <About />
         <Events />
+        <Partners />
         <Sponsors />
         <Community />
       </main>
