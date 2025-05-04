@@ -51,7 +51,7 @@ export default function Sponsors() {
       url: "https://steak.net",
     },
     {
-      name: "Mnt Capital",
+      name: "Mtn Capital",
       url: "https://mtncapital.xyz",
     },
     {
