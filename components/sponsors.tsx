@@ -58,6 +58,10 @@ export default function Sponsors() {
       name: "Menace Finance",
       url: "https://menace.finance",
     },
+    {
+      name: "Paragon.gdn",
+      url: "https://paragon.gdn",
+    },
   ]
 
   return (

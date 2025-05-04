@@ -103,7 +103,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400">© 2024 Solana ANZ. All rights reserved.</p>
+          <p className="text-gray-400">© 2025 Solana ANZ. All rights reserved.</p>
           <Link href="https://metasal.xyz" className="text-gray-400 hover:text-white mt-4 md:mt-0">
             metasal.xyz
           </Link>
