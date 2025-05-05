@@ -26,6 +26,10 @@ export default function Partners() {
       name: "DAOUNDER",
       url: "https://daounder.com",
     },
+    {
+      name: "Solana Summit",
+      url: "https://solanasummit.org",
+    },
   ]
 
   return (
