@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export default function Community() {
   return (
-    <section className="py-16 bg-purple-600 text-white">
+    <section className="py-16 logo-gradient text-white">
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
           <div className="flex flex-col justify-center space-y-4">
@@ -16,7 +16,7 @@ export default function Community() {
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
-              <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100" asChild>
+              <Button size="lg" className="bg-white text-[#800080] hover:bg-gray-100" asChild>
                 <a href="https://t.me/solanaANZ" target="_blank" rel="noopener noreferrer">
                   Join Telegram
                 </a>

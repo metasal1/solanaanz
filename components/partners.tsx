@@ -49,7 +49,7 @@ export default function Partners() {
               <a href={partner.url} target="_blank" rel="noopener noreferrer">
                 <CardContent className="flex flex-col items-center justify-center p-6 h-[120px]">
                   <div className="flex items-center justify-center h-full w-full">
-                    <p className="text-lg font-medium text-center text-purple-600 hover:text-purple-700">
+                    <p className="text-lg font-medium text-center text-[#0000FF] hover:text-[#0000cc]">
                       {partner.name}
                     </p>
                   </div>

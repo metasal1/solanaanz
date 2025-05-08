@@ -4,22 +4,22 @@ import { Users, Calendar, Gift, ShoppingBag } from "lucide-react"
 export default function About() {
   const features = [
     {
-      icon: <Users className="h-10 w-10 text-purple-600" />,
+      icon: <Users className="h-10 w-10 text-[#0000FF]" />,
       title: "Community",
       description: "Join the growing Solana community in Australia and New Zealand.",
     },
     {
-      icon: <Calendar className="h-10 w-10 text-purple-600" />,
+      icon: <Calendar className="h-10 w-10 text-[#800080]" />,
       title: "Events",
       description: "Regular meetups, hackathons, and educational events across ANZ.",
     },
     {
-      icon: <Gift className="h-10 w-10 text-purple-600" />,
+      icon: <Gift className="h-10 w-10 text-[#FF0000]" />,
       title: "Airdrops",
       description: "Stay updated on the latest Solana ecosystem airdrops.",
     },
     {
-      icon: <ShoppingBag className="h-10 w-10 text-purple-600" />,
+      icon: <ShoppingBag className="h-10 w-10 text-[#800080]" />,
       title: "Merchandise",
       description: "Exclusive Solana ANZ merchandise for community members.",
     },

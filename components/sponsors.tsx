@@ -81,7 +81,7 @@ export default function Sponsors() {
               <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
                 <CardContent className="flex flex-col items-center justify-center p-6 h-[120px]">
                   <div className="flex items-center justify-center h-full w-full">
-                    <p className="text-lg font-medium text-center text-purple-600 hover:text-purple-700">
+                    <p className="text-lg font-medium text-center text-[#800080] hover:text-[#6a006a]">
                       {sponsor.name}
                     </p>
                   </div>

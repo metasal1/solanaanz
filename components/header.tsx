@@ -28,14 +28,14 @@ export default function Header() {
             <div className="relative h-8 w-8">
               <Image src="/anz-logo.png" alt="Solana ANZ Logo" fill className="object-contain" />
             </div>
-            <span className="text-xl font-bold">Solana A/NZ</span>
+            <span className="text-xl font-bold logo-gradient-text">Solana A/NZ</span>
           </Link>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
-            <Link key={item.name} href={item.href} className="text-sm font-medium hover:text-purple-600">
+            <Link key={item.name} href={item.href} className="text-sm font-medium hover:text-[#800080]">
               {item.name}
             </Link>
           ))}
@@ -56,7 +56,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium hover:text-purple-600"
+                className="text-sm font-medium hover:text-[#800080]"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

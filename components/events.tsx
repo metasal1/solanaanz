@@ -56,7 +56,7 @@ export default function Events() {
                 <p className="text-sm text-muted-foreground mb-4">
                   {event.time} • {event.organizer}
                 </p>
-                <Button className="w-full bg-purple-600 hover:bg-purple-700" asChild>
+                <Button className="w-full bg-[#800080] hover:bg-[#6a006a]" asChild>
                   <a href={event.url} target="_blank" rel="noopener noreferrer">
                     Register Now
                   </a>
@@ -66,7 +66,7 @@ export default function Events() {
           ))}
         </div>
         <div className="flex justify-center mt-12">
-          <Button variant="outline" size="lg" asChild>
+          <Button variant="outline" size="lg" className="border-[#800080] text-[#800080] hover:bg-[#800080]/10" asChild>
             <a href="https://lu.ma/solanaanz" target="_blank" rel="noopener noreferrer">
               View All Events
             </a>
