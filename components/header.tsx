@@ -26,7 +26,7 @@ export default function Header() {
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
             <div className="relative h-8 w-8">
-              <Image src="/solana-logo.png" alt="Solana ANZ Logo" fill className="object-contain" />
+              <Image src="/anz-logo.png" alt="Solana ANZ Logo" fill className="object-contain" />
             </div>
             <span className="text-xl font-bold">Solana A/NZ</span>
           </Link>
