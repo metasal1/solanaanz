@@ -109,3 +109,34 @@
 .dark .logo-gradient-border {
   border-image: linear-gradient(to bottom, #4d4dff, #a64ca6, #ff4d4d) 1;
 }
+
+/* Partner logo adjustments for dark mode */
+.dark .partner-logo-dark-invert {
+  filter: invert(1);
+}
+
+.dark .partner-logo-dark-brightness {
+  filter: brightness(1.2);
+}
+
+/* Partner card hover effects */
+@keyframes subtle-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.partner-card-hover:hover {
+  animation: subtle-pulse 2s infinite ease-in-out;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.dark .partner-card-hover:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}

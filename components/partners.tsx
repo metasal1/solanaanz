@@ -1,34 +1,42 @@
 import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image"
 
 export default function Partners() {
   const partners = [
     {
       name: "OnionDAO",
       url: "https://oniondao.org",
+      logo: "/partners/oniondao.jpg",
     },
     {
       name: "MtnDAO",
       url: "https://mtndao.xyz",
+      logo: "/partners/mtndao.jpg",
     },
     {
       name: "Colosseum",
       url: "https://colosseum.org",
+      logo: "/partners/colosseum.jpg",
     },
     {
       name: "Solana Turbine",
       url: "https://solana.org/turbine",
+      logo: "/partners/turbine.jpg",
     },
     {
       name: "Superteam",
       url: "https://superteam.fun",
+      logo: "/partners/superteam.jpg",
     },
     {
       name: "DAOUNDER",
       url: "https://daounder.com",
+      logo: "/partners/daounder.png",
     },
     {
       name: "Solana Summit",
       url: "https://solanasummit.org",
+      logo: "/partners/summit.jpg",
     },
   ]
 
@@ -45,22 +53,27 @@ export default function Partners() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-6 mt-12 md:grid-cols-3">
+        <div className="grid grid-cols-2 gap-8 mt-12 md:grid-cols-3 lg:grid-cols-4">
           {partners.map((partner) => (
-            <Card
-              key={partner.name}
-              className="border-0 shadow-sm hover:shadow-md transition-shadow dark:bg-gray-900 dark:shadow-none dark:hover:bg-gray-800"
-            >
-              <a href={partner.url} target="_blank" rel="noopener noreferrer">
-                <CardContent className="flex flex-col items-center justify-center p-6 h-[120px]">
-                  <div className="flex items-center justify-center h-full w-full">
-                    <p className="text-lg font-medium text-center text-[#0000FF] hover:text-[#0000cc] dark:text-[#4d4dff] dark:hover:text-[#8080ff]">
-                      {partner.name}
-                    </p>
+            <a key={partner.name} href={partner.url} target="_blank" rel="noopener noreferrer" className="group">
+              <Card className="border-0 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 dark:bg-gray-900 dark:shadow-none dark:hover:bg-gray-800 h-full transform group-hover:scale-105">
+                <CardContent className="flex flex-col items-center justify-center p-6 h-full">
+                  <div className="relative h-20 w-full flex items-center justify-center mb-4">
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-50 dark:to-gray-900 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+                    <Image
+                      src={partner.logo || "/placeholder.svg"}
+                      alt={`${partner.name} logo`}
+                      width={100}
+                      height={100}
+                      className="object-contain max-h-20 transition-all duration-300 group-hover:brightness-110"
+                    />
                   </div>
+                  <h3 className="text-lg font-medium text-center mt-2 text-[#0000FF] dark:text-[#4d4dff] group-hover:text-[#800080] dark:group-hover:text-[#a64ca6] transition-colors duration-300">
+                    {partner.name}
+                  </h3>
                 </CardContent>
-              </a>
-            </Card>
+              </Card>
+            </a>
           ))}
         </div>
       </div>
