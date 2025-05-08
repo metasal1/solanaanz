@@ -65,23 +65,28 @@ export default function Sponsors() {
   ]
 
   return (
-    <section id="sponsors" className="py-16 bg-white">
+    <section id="sponsors" className="py-16 bg-white dark:bg-gray-950">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Our Sponsors</h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl dark:text-white">
+              Our Sponsors
+            </h2>
+            <p className="max-w-[900px] text-muted-foreground dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Solana ANZ is proudly supported by these amazing organizations
             </p>
           </div>
         </div>
         <div className="grid grid-cols-2 gap-6 mt-12 md:grid-cols-3 lg:grid-cols-4">
           {sponsors.map((sponsor) => (
-            <Card key={sponsor.name} className="border-0 shadow-sm hover:shadow-md transition-shadow">
+            <Card
+              key={sponsor.name}
+              className="border-0 shadow-sm hover:shadow-md transition-shadow dark:bg-gray-900 dark:shadow-none dark:hover:bg-gray-800"
+            >
               <a href={sponsor.url} target="_blank" rel="noopener noreferrer">
                 <CardContent className="flex flex-col items-center justify-center p-6 h-[120px]">
                   <div className="flex items-center justify-center h-full w-full">
-                    <p className="text-lg font-medium text-center text-[#800080] hover:text-[#6a006a]">
+                    <p className="text-lg font-medium text-center text-[#800080] hover:text-[#6a006a] dark:text-[#a64ca6] dark:hover:text-[#bf7fbf]">
                       {sponsor.name}
                     </p>
                   </div>

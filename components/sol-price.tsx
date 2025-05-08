@@ -17,8 +17,11 @@ export default function SolPrice() {
   const [prices, setPrices] = useState<PriceData | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
+
     const fetchPrice = async () => {
       try {
         setLoading(true)
@@ -73,10 +76,12 @@ export default function SolPrice() {
       }
     }
 
-    fetchPrice()
-    const interval = setInterval(fetchPrice, 120000) // Update every 2 minutes
-    return () => clearInterval(interval)
-  }, [])
+    if (mounted) {
+      fetchPrice()
+      const interval = setInterval(fetchPrice, 120000) // Update every 2 minutes
+      return () => clearInterval(interval)
+    }
+  }, [mounted])
 
   const renderPriceWithChange = (price: string, change: string, flag: string) => {
     const changeNum = Number.parseFloat(change)
@@ -95,26 +100,30 @@ export default function SolPrice() {
     )
   }
 
+  if (!mounted) {
+    return null
+  }
+
   return (
-    <section className="py-4 bg-gray-50">
+    <section className="py-4 bg-gray-50 dark:bg-gray-900">
       <div className="container px-4 md:px-6">
         <div className="flex justify-center">
-          <Card className="border-0 shadow-sm">
+          <Card className="border-0 shadow-sm dark:bg-gray-800 dark:border-gray-700">
             <CardContent className="flex items-center p-3">
               {loading ? (
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-medium">SOL</span>
-                  <Loader2 className="h-4 w-4 animate-spin text-[#800080]" />
+                  <span className="text-sm font-medium dark:text-white">SOL</span>
+                  <Loader2 className="h-4 w-4 animate-spin text-[#800080] dark:text-[#a64ca6]" />
                 </div>
               ) : error ? (
                 <div className="flex items-center gap-4">
-                  <span className="text-sm font-medium">SOL</span>
-                  <span>{prices?.usd}</span>
+                  <span className="text-sm font-medium dark:text-white">SOL</span>
+                  <span className="dark:text-white">{prices?.usd}</span>
                 </div>
               ) : (
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6">
                   <span className="text-sm font-medium logo-gradient-text">SOL</span>
-                  <div className="flex flex-col sm:flex-row gap-1 sm:gap-6">
+                  <div className="flex flex-col sm:flex-row gap-1 sm:gap-6 dark:text-white">
                     {prices && renderPriceWithChange(prices.usd, prices.usd_change, "🇺🇸")}
                     {prices && renderPriceWithChange(prices.aud, prices.aud_change, "🇦🇺")}
                     {prices && renderPriceWithChange(prices.nzd, prices.nzd_change, "🇳🇿")}

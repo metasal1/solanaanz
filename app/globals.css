@@ -89,6 +89,23 @@
   color: transparent;
 }
 
+/* Brighter gradient for dark mode */
+.dark .logo-gradient-text {
+  background: linear-gradient(to bottom, #4d4dff, #a64ca6, #ff4d4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.dark .logo-gradient {
+  background: linear-gradient(to bottom, #4d4dff, #a64ca6, #ff4d4d);
+}
+
 .logo-gradient-border {
   border-image: linear-gradient(to bottom, #0000ff, #800080, #ff0000) 1;
+}
+
+.dark .logo-gradient-border {
+  border-image: linear-gradient(to bottom, #4d4dff, #a64ca6, #ff4d4d) 1;
 }

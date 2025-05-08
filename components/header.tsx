@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -21,7 +22,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white">
+    <header className="sticky top-0 z-50 w-full border-b bg-white dark:bg-gray-950 dark:border-gray-800">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
@@ -35,28 +36,36 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
-            <Link key={item.name} href={item.href} className="text-sm font-medium hover:text-[#800080]">
+            <Link
+              key={item.name}
+              href={item.href}
+              className="text-sm font-medium hover:text-[#800080] dark:text-gray-200 dark:hover:text-[#a64ca6]"
+            >
               {item.name}
             </Link>
           ))}
+          <ThemeToggle />
         </nav>
 
         {/* Mobile Menu Button */}
-        <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          <span className="sr-only">Toggle menu</span>
-        </Button>
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
+          <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            <span className="sr-only">Toggle menu</span>
+          </Button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="container md:hidden py-4 pb-6">
+        <div className="container md:hidden py-4 pb-6 bg-white dark:bg-gray-950">
           <nav className="flex flex-col space-y-4">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium hover:text-[#800080]"
+                className="text-sm font-medium hover:text-[#800080] dark:text-gray-200 dark:hover:text-[#a64ca6]"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
