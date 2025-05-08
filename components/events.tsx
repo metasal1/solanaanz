@@ -1,31 +1,30 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+"use client"
+
+import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Calendar } from "lucide-react"
-import Image from "next/image"
 
 export default function Events() {
-  const events = [
-    {
-      title: "Solana 101 for New Devs",
-      date: "May 6, 2024",
-      time: "10:00 AM",
-      location: "Virtual",
-      description: "An introductory session for developers new to the Solana ecosystem.",
-      organizer: "By Metasal",
-      image: "/event-solana101.png",
-      url: "https://lu.ma/solanaanz",
-    },
-    {
-      title: "Solana Co-Hack Melbourne",
-      date: "May 13, 2024",
-      time: "10:00 AM",
-      location: "Melbourne, Australia (To Be Announced)",
-      description: "Join fellow developers for a collaborative hackathon in Melbourne.",
-      organizer: "By Metasal",
-      image: "/event-cohack.png",
-      url: "https://lu.ma/solanaanz",
-    },
-  ]
+  const [iframeHeight, setIframeHeight] = useState(450)
+
+  // Adjust iframe height based on screen size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setIframeHeight(600)
+      } else {
+        setIframeHeight(450)
+      }
+    }
+
+    // Set initial height
+    handleResize()
+
+    // Add event listener
+    window.addEventListener("resize", handleResize)
+
+    // Clean up
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
   return (
     <section id="events" className="py-16 bg-gray-50">
@@ -38,33 +37,27 @@ export default function Events() {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-8 mt-12 md:grid-cols-3">
-          {events.map((event, index) => (
-            <Card key={index} className="border-0 shadow-md overflow-hidden">
-              <div className="relative h-48 w-full">
-                <Image src={event.image || "/placeholder.svg"} alt={event.title} fill className="object-cover" />
-              </div>
-              <CardHeader>
-                <CardTitle>{event.title}</CardTitle>
-                <div className="flex items-center text-sm text-muted-foreground">
-                  <Calendar className="mr-2 h-4 w-4" />
-                  {event.date} • {event.location}
-                </div>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">{event.description}</p>
-                <p className="text-sm text-muted-foreground mb-4">
-                  {event.time} • {event.organizer}
-                </p>
-                <Button className="w-full bg-[#800080] hover:bg-[#6a006a]" asChild>
-                  <a href={event.url} target="_blank" rel="noopener noreferrer">
-                    Register Now
-                  </a>
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+
+        <div className="mt-12 flex justify-center">
+          <div className="w-full max-w-4xl">
+            <iframe
+              src="https://lu.ma/embed/calendar/cal-5AwelwAyyUTWlbS/events"
+              width="100%"
+              height={iframeHeight}
+              frameBorder="0"
+              style={{
+                border: "1px solid #bfcbda88",
+                borderRadius: "4px",
+                boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+              }}
+              allowFullScreen
+              aria-hidden="false"
+              tabIndex={0}
+              title="Solana ANZ Events Calendar"
+            />
+          </div>
         </div>
+
         <div className="flex justify-center mt-12">
           <Button variant="outline" size="lg" className="border-[#800080] text-[#800080] hover:bg-[#800080]/10" asChild>
             <a href="https://lu.ma/solanaanz" target="_blank" rel="noopener noreferrer">
