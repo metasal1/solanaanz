@@ -7,6 +7,7 @@ import Header from "@/components/header"
 import SolPrice from "@/components/sol-price"
 import Sponsors from "@/components/sponsors"
 import Partners from "@/components/partners"
+import Team from "@/components/team"
 import BreakpointBanner from "@/components/breakpoint-banner"
 import BreakpointFeature from "@/components/breakpoint-feature"
 
@@ -21,6 +22,7 @@ export default function Home() {
         <SolPrice />
         <About />
         <Events />
+        <Team />
         <Partners />
         <Sponsors />
         <Community />

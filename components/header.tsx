@@ -14,6 +14,7 @@ export default function Header() {
     { name: "Home", href: "/" },
     { name: "Airdrops", href: "#airdrops" },
     { name: "Partners", href: "#partners" },
+    { name: "Team", href: "#team" },
     { name: "Merch", href: "#merch" },
     { name: "FAQs", href: "#faqs" },
     { name: "Events", href: "#events" },
