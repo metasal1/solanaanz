@@ -1,25 +1,21 @@
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 export default function BreakpointFeature() {
   return (
     <section className="py-8 bg-black">
       <div className="container px-4 md:px-6 mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="relative w-full md:w-1/2 h-[200px] md:h-[250px] rounded-lg overflow-hidden">
-            <Image src="/breakpoint-banner.jpeg" alt="Breakpoint 2025 in Abu Dhabi" fill className="object-cover" />
-          </div>
-          <div className="w-full md:w-1/2 space-y-4">
-            <div className="relative h-12 w-48 md:h-16 md:w-64 mb-2">
-              <Image src="/breakpoint-logo.png" alt="Breakpoint Logo" fill className="object-contain" />
+        <div className="flex flex-col items-center justify-center gap-6">
+          <div className="w-full space-y-4 text-center">
+            <div className="relative h-12 w-48 md:h-16 md:w-64 mx-auto mb-2">
+              <img src="/breakpoint-logo.png" alt="Breakpoint Logo" className="object-contain h-full w-full" />
             </div>
             <h2 className="text-xl md:text-2xl font-bold text-white">ABU DHABI • DECEMBER 11-13, 2025</h2>
-            <p className="text-white text-sm md:text-base">
+            <p className="text-white text-sm md:text-base max-w-2xl mx-auto">
               Join the Aussie & Kiwi delegation at Solana's biggest global event in Abu Dhabi from December 11-13, 2025.
               Connect with fellow ANZ community members, showcase your projects, and represent our region on the global
               stage.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
               <Button
                 className="bg-gradient-to-r from-purple-600 to-blue-500 hover:from-purple-700 hover:to-blue-600 text-white"
                 asChild
