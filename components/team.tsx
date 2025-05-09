@@ -39,14 +39,14 @@ export default function Team() {
     },
     {
       name: "Darren",
-      location: "Brisbane",
+      location: "Gold Coast",
       image: "/darren-profile.jpeg",
       twitter: "https://x.com/darrenrogan",
       telegram: "https://t.me/darrenrogan",
     },
     {
       name: "Nissan",
-      location: "Gold Coast",
+      location: "Brisbane",
       image: "/nissan-profile.jpeg",
       twitter: "https://twitter.com/redditech",
       telegram: "https://t.me/redditech",
