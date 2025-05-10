@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "next-themes"
+import Image from "next/image"
 
 export default function Events() {
   const [iframeHeight, setIframeHeight] = useState(450)
@@ -51,8 +52,8 @@ export default function Events() {
           </div>
         </div>
 
-        <div className="mt-12 flex justify-center">
-          <div className="w-full max-w-4xl">
+        <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="w-full">
             <iframe
               src={`https://lu.ma/embed/calendar/cal-5AwelwAyyUTWlbS/events${isDarkMode ? "?dark=1" : ""}`}
               width="100%"
@@ -70,6 +71,19 @@ export default function Events() {
               tabIndex={0}
               title="Solana ANZ Events Calendar"
             />
+          </div>
+
+          <div className="w-full">
+            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
+              <Image src="/sal-presenting.webp" alt="Solana ANZ community presentation" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+                <h3 className="text-white text-xl font-bold">Community Workshops</h3>
+                <p className="text-white/90 mt-2">
+                  Our events feature expert presentations, hands-on workshops, and networking opportunities for
+                  developers and enthusiasts.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 

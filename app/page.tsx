@@ -11,6 +11,7 @@ import Team from "@/components/team"
 import BreakpointBanner from "@/components/breakpoint-banner"
 import BreakpointFeature from "@/components/breakpoint-feature"
 import AnzSolToken from "@/components/anzsol-token"
+import EventGallery from "@/components/event-gallery"
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <About />
         <AnzSolToken />
         <Events />
+        <EventGallery />
         <Team />
         <Partners />
         <Sponsors />
