@@ -38,6 +38,11 @@ export default function Partners() {
       url: "https://solanasummit.org",
       logo: "/partners/summit.jpg",
     },
+    {
+      name: "Upside DAO",
+      url: "https://upsidedao.com.au",
+      logo: "/partners/upside.png",
+    },
   ]
 
   return (
