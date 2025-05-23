@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Globe } from "lucide-react"
+import { ExternalLink, Globe, Twitter } from "lucide-react"
 
 type Project = {
   name: string
@@ -13,6 +13,11 @@ type Project = {
     name: string
     website: string
     logo?: string
+  }
+  socialLinks?: {
+    twitter?: string
+    telegram?: string
+    discord?: string
   }
   tags: string[]
   featured: boolean
@@ -39,11 +44,14 @@ export default function ProjectsShowcase() {
       name: "Scrim.fun",
       description:
         "An esports platform that enables competitive gaming tournaments and matchmaking on Solana, with integrated token rewards and NFT prizes.",
-      logo: "/projects/scrim-logo.png",
+      logo: "/projects/scrim-logo-actual.jpeg",
       website: "https://scrim.fun",
       developer: {
         name: "Plexzy",
         website: "https://plexzy.com",
+      },
+      socialLinks: {
+        twitter: "https://x.com/scrimdotfun",
       },
       tags: ["Gaming", "Esports", "Tournaments"],
       featured: true,
@@ -192,36 +200,53 @@ export default function ProjectsShowcase() {
                           ))}
                         </div>
                       </div>
-                      <div className="flex gap-3">
-                        <Button
-                          className="bg-[#800080] hover:bg-[#6a006a] dark:bg-[#a64ca6] dark:hover:bg-[#bf7fbf]"
-                          asChild
-                        >
-                          <a
-                            href={project.website}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2"
+                      <div className="flex flex-col gap-4">
+                        {project.socialLinks && (
+                          <div className="flex gap-2">
+                            {project.socialLinks.twitter && (
+                              <a
+                                href={project.socialLinks.twitter}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-[#1DA1F2] hover:text-[#1a94da] transition-colors"
+                                aria-label={`${project.name} on Twitter`}
+                              >
+                                <Twitter className="h-5 w-5" />
+                              </a>
+                            )}
+                          </div>
+                        )}
+                        <div className="flex gap-3">
+                          <Button
+                            className="bg-[#800080] hover:bg-[#6a006a] dark:bg-[#a64ca6] dark:hover:bg-[#bf7fbf]"
+                            asChild
                           >
-                            <Globe className="h-4 w-4" />
-                            Visit Project
-                          </a>
-                        </Button>
-                        <Button
-                          variant="outline"
-                          className="border-[#800080] text-[#800080] hover:bg-[#800080]/10 dark:border-[#a64ca6] dark:text-[#a64ca6] dark:hover:bg-[#a64ca6]/10"
-                          asChild
-                        >
-                          <a
-                            href={project.developer.website}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2"
+                            <a
+                              href={project.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-2"
+                            >
+                              <Globe className="h-4 w-4" />
+                              Visit Project
+                            </a>
+                          </Button>
+                          <Button
+                            variant="outline"
+                            className="border-[#800080] text-[#800080] hover:bg-[#800080]/10 dark:border-[#a64ca6] dark:text-[#a64ca6] dark:hover:bg-[#a64ca6]/10"
+                            asChild
                           >
-                            <ExternalLink className="h-4 w-4" />
-                            Developer
-                          </a>
-                        </Button>
+                            <a
+                              href={project.developer.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-2"
+                            >
+                              <ExternalLink className="h-4 w-4" />
+                              Developer
+                            </a>
+                          </Button>
+                        </div>
                       </div>
                     </div>
                     {project.screenshot && (
