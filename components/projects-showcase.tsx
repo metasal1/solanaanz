@@ -295,11 +295,11 @@ export default function ProjectsShowcase() {
           <p className="text-muted-foreground dark:text-gray-400 mb-6">
             Are you building a Solana project in Australia or New Zealand? We'd love to feature it here!
           </p>
-          <Button className="bg-[#800080] hover:bg-[#6a006a] dark:bg-[#a64ca6] dark:hover:bg-[#bf7fbf]" asChild>
-            <a href="mailto:gm@metasal.xyz?subject=solana%20anz%20project" className="flex items-center gap-2">
+          <a href="mailto:gm@metasal.xyz?subject=solana%20anz%20project" className="inline-block">
+            <Button className="bg-[#800080] hover:bg-[#6a006a] dark:bg-[#a64ca6] dark:hover:bg-[#bf7fbf]">
               Submit Your Project
-            </a>
-          </Button>
+            </Button>
+          </a>
         </div>
       </div>
     </section>

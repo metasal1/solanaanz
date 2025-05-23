@@ -1,7 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
@@ -9,18 +10,25 @@ import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const isHomePage = pathname === "/"
+
+  // Close mobile menu when changing routes
+  useEffect(() => {
+    setIsMenuOpen(false)
+  }, [pathname])
 
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Projects", href: "/projects" },
-    { name: "Airdrops", href: "#airdrops" },
-    { name: "Partners", href: "#partners" },
-    { name: "Team", href: "#team" },
-    { name: "Merch", href: "#merch" },
-    { name: "FAQs", href: "#faqs" },
-    { name: "Events", href: "#events" },
-    { name: "Sponsors", href: "#sponsors" },
-    { name: "Contact", href: "#contact" },
+    { name: "Airdrops", href: isHomePage ? "#airdrops" : "/#airdrops" },
+    { name: "Partners", href: isHomePage ? "#partners" : "/#partners" },
+    { name: "Team", href: isHomePage ? "#team" : "/#team" },
+    { name: "Merch", href: isHomePage ? "#merch" : "/#merch" },
+    { name: "FAQs", href: isHomePage ? "#faqs" : "/#faqs" },
+    { name: "Events", href: isHomePage ? "#events" : "/#events" },
+    { name: "Sponsors", href: isHomePage ? "#sponsors" : "/#sponsors" },
+    { name: "Contact", href: isHomePage ? "#contact" : "/#contact" },
   ]
 
   return (
