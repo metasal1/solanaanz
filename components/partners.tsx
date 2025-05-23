@@ -43,6 +43,11 @@ export default function Partners() {
       url: "https://upsidedao.com.au",
       logo: "/partners/upside.png",
     },
+    {
+      name: "Blueshift",
+      url: "https://blueshift.gg",
+      logo: "/partners/blueshift.jpeg",
+    },
   ]
 
   return (
