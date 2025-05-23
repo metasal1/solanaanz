@@ -47,8 +47,8 @@ export default function ProjectsShowcase() {
       logo: "/projects/scrim-logo-actual.jpeg",
       website: "https://scrim.fun",
       developer: {
-        name: "Plexzy",
-        website: "https://plexzy.com",
+        name: "Scrim Team",
+        website: "https://x.com/scrimdotfun",
       },
       socialLinks: {
         twitter: "https://x.com/scrimdotfun",
