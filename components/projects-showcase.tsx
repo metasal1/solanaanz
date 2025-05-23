@@ -49,6 +49,20 @@ export default function ProjectsShowcase() {
       featured: true,
     },
     {
+      name: "Hey Hal",
+      description:
+        "Your AI Solana sidekick on X (Twitter). Sign in with your X account, load SOL, and perform on-chain actions directly on the timeline including sending tokens, swapping, and more.",
+      logo: "/sponsors/heyhal.jpg",
+      screenshot: "/projects/heyhal-screenshot.jpeg",
+      website: "https://heyhal.xyz",
+      developer: {
+        name: "Hey Hal Team",
+        website: "https://heyhal.xyz",
+      },
+      tags: ["AI", "Social", "Wallet", "Twitter Bot"],
+      featured: true,
+    },
+    {
       name: "SupaPump.fun",
       description:
         "The ultimate Solana token creator platform featuring an automated pump bot. Create and launch tokens effortlessly with advanced tools and Telegram integration.",
@@ -88,6 +102,20 @@ export default function ProjectsShowcase() {
         website: "https://zeaknavigator.com",
       },
       tags: ["Wallet", "zkCompression", "Tools"],
+      featured: false,
+    },
+    {
+      name: "Legion",
+      description:
+        "A comprehensive Solana platform providing advanced trading tools, analytics, and community features for serious DeFi users and traders in the ANZ region.",
+      logo: "/sponsors/legion.jpg",
+      screenshot: "/projects/legion-screenshot.jpeg",
+      website: "https://legion.cc",
+      developer: {
+        name: "Legion Team",
+        website: "https://legion.cc",
+      },
+      tags: ["Trading", "DeFi", "Analytics"],
       featured: false,
     },
     {
