@@ -1,12 +1,12 @@
 import Image from "next/image"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Globe, Twitter } from "lucide-react"
+import { ExternalLink, Globe, Twitter, TrendingUp } from "lucide-react"
 
 type Project = {
   name: string
   description: string
-  logo: string
+  logo?: string
   screenshot?: string
   website: string
   developer: {
@@ -21,10 +21,95 @@ type Project = {
   }
   tags: string[]
   featured: boolean
+  successStory?: boolean
 }
 
 export default function ProjectsShowcase() {
   const projects: Project[] = [
+    // Success Stories - Venta and Legion moved to first and second
+    {
+      name: "Venta Pay",
+      description:
+        "A revolutionary sales and payment platform that has successfully eliminated friction in business transactions. Venta Pay has empowered sales teams across multiple industries to achieve higher conversion rates and streamlined payment processing on Solana.",
+      screenshot: "/projects/venta-screenshot.jpeg",
+      website: "https://venta.xyz",
+      developer: {
+        name: "Venta Team",
+        website: "https://venta.xyz",
+      },
+      tags: ["Payments", "Sales", "Business", "Fintech"],
+      featured: false,
+      successStory: true,
+    },
+    {
+      name: "Legion",
+      description:
+        "A comprehensive Solana platform that has become the go-to solution for advanced trading tools, analytics, and community features. Legion has successfully established itself as a leading platform for serious DeFi users and traders in the ANZ region.",
+      logo: "/sponsors/legion.jpg",
+      screenshot: "/projects/legion-screenshot.jpeg",
+      website: "https://legion.cc",
+      developer: {
+        name: "Legion Team",
+        website: "https://legion.cc",
+      },
+      tags: ["Trading", "DeFi", "Analytics", "Community"],
+      featured: false,
+      successStory: true,
+    },
+    {
+      name: "Magic Eden",
+      description:
+        "The leading NFT marketplace on Solana, facilitating billions in trading volume. Magic Eden has become the go-to platform for discovering, buying, and selling NFTs across multiple blockchains.",
+      screenshot: "/projects/magiceden-screenshot.jpeg",
+      website: "https://magiceden.io",
+      developer: {
+        name: "Magic Eden Team",
+        website: "https://magiceden.io",
+      },
+      tags: ["NFT Marketplace", "Multi-chain", "Trading"],
+      featured: false,
+      successStory: true,
+    },
+    {
+      name: "Drift Protocol",
+      description:
+        "A decentralized perpetual futures exchange built on Solana, offering leveraged trading with deep liquidity and minimal slippage. One of the most successful DeFi protocols in the ecosystem.",
+      website: "https://drift.trade",
+      developer: {
+        name: "Drift Protocol Team",
+        website: "https://drift.trade",
+      },
+      tags: ["DeFi", "Perpetuals", "Trading", "Derivatives"],
+      featured: false,
+      successStory: true,
+    },
+    {
+      name: "Step Finance",
+      description:
+        "A comprehensive portfolio management and analytics platform for Solana DeFi. Step Finance provides users with a unified dashboard to track and manage their DeFi positions across the ecosystem.",
+      website: "https://step.finance",
+      developer: {
+        name: "Step Finance Team",
+        website: "https://step.finance",
+      },
+      tags: ["DeFi", "Portfolio Management", "Analytics", "Dashboard"],
+      featured: false,
+      successStory: true,
+    },
+    {
+      name: "Zeta Markets",
+      description:
+        "A leading derivatives platform on Solana offering options and futures trading. Zeta Markets provides institutional-grade derivatives trading with advanced risk management tools.",
+      website: "https://zeta.markets",
+      developer: {
+        name: "Zeta Markets Team",
+        website: "https://zeta.markets",
+      },
+      tags: ["DeFi", "Derivatives", "Options", "Futures"],
+      featured: false,
+      successStory: true,
+    },
+    // Featured Projects
     {
       name: "Casino Royale",
       description:
@@ -70,6 +155,7 @@ export default function ProjectsShowcase() {
       tags: ["AI", "Social", "Wallet", "Twitter Bot"],
       featured: true,
     },
+    // Other Projects
     {
       name: "SupaPump.fun",
       description:
@@ -113,20 +199,6 @@ export default function ProjectsShowcase() {
       featured: false,
     },
     {
-      name: "Legion",
-      description:
-        "A comprehensive Solana platform providing advanced trading tools, analytics, and community features for serious DeFi users and traders in the ANZ region.",
-      logo: "/sponsors/legion.jpg",
-      screenshot: "/projects/legion-screenshot.jpeg",
-      website: "https://legion.cc",
-      developer: {
-        name: "Legion Team",
-        website: "https://legion.cc",
-      },
-      tags: ["Trading", "DeFi", "Analytics"],
-      featured: false,
-    },
-    {
       name: "Stables.fun",
       description:
         "A comprehensive stablecoin platform on Solana providing easy access to stable digital assets with advanced trading and management features for the ANZ market.",
@@ -141,12 +213,140 @@ export default function ProjectsShowcase() {
     },
   ]
 
+  const successStories = projects.filter((project) => project.successStory)
   const featuredProjects = projects.filter((project) => project.featured)
-  const otherProjects = projects.filter((project) => !project.featured)
+  const otherProjects = projects.filter((project) => !project.featured && !project.successStory)
 
   return (
     <section className="py-16 bg-gray-50 dark:bg-gray-900">
       <div className="container px-4 md:px-6">
+        {successStories.length > 0 && (
+          <>
+            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
+              <div className="flex items-center gap-2">
+                <TrendingUp className="h-8 w-8 text-green-500" />
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl dark:text-white">
+                  Success Stories
+                </h2>
+              </div>
+              <p className="max-w-[900px] text-muted-foreground dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                Major Solana protocols and platforms built by Australian teams that have achieved global success
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              {successStories.map((project) => (
+                <Card key={project.name} className="overflow-hidden border-0 shadow-lg dark:bg-gray-800 relative">
+                  <div className="absolute top-4 right-4 z-10">
+                    <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
+                      <TrendingUp className="h-3 w-3" />
+                      Success Story
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-1 gap-6">
+                    <div className="p-6 flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-center gap-4 mb-4">
+                          {project.logo && (
+                            <div className="relative h-16 w-16 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-700">
+                              <Image
+                                src={project.logo || "/placeholder.svg"}
+                                alt={`${project.name} logo`}
+                                fill
+                                className="object-cover"
+                              />
+                            </div>
+                          )}
+                          <div>
+                            <CardTitle className="text-2xl font-bold">{project.name}</CardTitle>
+                            <CardDescription className="text-sm">
+                              by{" "}
+                              <a
+                                href={project.developer.website}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-[#800080] dark:text-[#a64ca6] hover:underline"
+                              >
+                                {project.developer.name}
+                              </a>
+                            </CardDescription>
+                          </div>
+                        </div>
+                        <p className="text-muted-foreground dark:text-gray-300 mb-6">{project.description}</p>
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {project.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="px-3 py-1 text-xs font-medium rounded-full bg-green-500/10 text-green-600 dark:bg-green-500/20 dark:text-green-400"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-4">
+                        {project.socialLinks && (
+                          <div className="flex gap-2">
+                            {project.socialLinks.twitter && (
+                              <a
+                                href={project.socialLinks.twitter}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-[#1DA1F2] hover:text-[#1a94da] transition-colors"
+                                aria-label={`${project.name} on Twitter`}
+                              >
+                                <Twitter className="h-5 w-5" />
+                              </a>
+                            )}
+                          </div>
+                        )}
+                        <div className="flex gap-3">
+                          <Button className="bg-green-600 hover:bg-green-700 text-white" asChild>
+                            <a
+                              href={project.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-2"
+                            >
+                              <Globe className="h-4 w-4" />
+                              Visit Platform
+                            </a>
+                          </Button>
+                          <Button
+                            variant="outline"
+                            className="border-green-600 text-green-600 hover:bg-green-600/10"
+                            asChild
+                          >
+                            <a
+                              href={project.developer.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-2"
+                            >
+                              <ExternalLink className="h-4 w-4" />
+                              Learn More
+                            </a>
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                    {project.screenshot && (
+                      <div className="relative h-64 overflow-hidden bg-gray-100 dark:bg-gray-700">
+                        <Image
+                          src={project.screenshot || "/placeholder.svg"}
+                          alt={`${project.name} screenshot`}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    )}
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </>
+        )}
+
         {featuredProjects.length > 0 && (
           <>
             <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
@@ -154,7 +354,7 @@ export default function ProjectsShowcase() {
                 Featured Projects
               </h2>
               <p className="max-w-[900px] text-muted-foreground dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Highlighting exceptional Solana projects from Australia and New Zealand
+                Highlighting exceptional emerging Solana projects from Australia and New Zealand
               </p>
             </div>
 
