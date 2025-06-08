@@ -50,7 +50,7 @@ export default function Partners() {
     {
       name: "InStep",
       url: "https://instep.fit",
-      logo: "/partners/instep.png",
+      logo: "/partners/instep.jpeg", // Changed from .png to .jpeg
     },
   ]
 

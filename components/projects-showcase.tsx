@@ -114,7 +114,7 @@ export default function ProjectsShowcase() {
       name: "InStep",
       description:
         "A mobile app that transforms everyday walking into an engaging adventure. InStep is a fitness platform fused with game mechanics, where you enter challenges with a small buy-in, contribute to a collective prize pool, and compete to earn your share simply by staying active.",
-      logo: "/partners/instep.png",
+      logo: "/partners/instep.jpeg",
       screenshot: "/projects/instep-screenshot.jpeg",
       website: "https://instep.fit",
       developer: {
@@ -174,7 +174,7 @@ export default function ProjectsShowcase() {
       name: "SupaPump.fun",
       description:
         "The ultimate Solana token creator platform featuring an automated pump bot. Create and launch tokens effortlessly with advanced tools and Telegram integration.",
-      logo: "/sponsors/supa.png",
+      logo: "/sponsors/supa.jpeg",
       screenshot: "/projects/supapump-screenshot.jpeg",
       website: "https://supapump.fun",
       developer: {
