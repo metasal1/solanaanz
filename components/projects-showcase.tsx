@@ -44,7 +44,7 @@ export default function ProjectsShowcase() {
     {
       name: "Legion",
       description:
-        "A comprehensive Solana platform that has become the go-to solution for advanced trading tools, analytics, and community features. Legion has successfully established itself as a leading platform for serious DeFi users and traders in the ANZ region.",
+        "The place where the best projects go to raise capital from the highest value community members at all stages of a project. Proudly built on Solana.",
       logo: "/sponsors/legion.jpg",
       screenshot: "/projects/legion-screenshot.jpeg",
       website: "https://legion.cc",
@@ -52,7 +52,7 @@ export default function ProjectsShowcase() {
         name: "Legion Team",
         website: "https://legion.cc",
       },
-      tags: ["Trading", "DeFi", "Analytics", "Community"],
+      tags: ["Capital Raising", "Community", "Investment", "Platform"],
       featured: false,
       successStory: true,
     },
@@ -110,6 +110,20 @@ export default function ProjectsShowcase() {
       successStory: true,
     },
     // Featured Projects
+    {
+      name: "InStep",
+      description:
+        "A mobile app that transforms everyday walking into an engaging adventure. InStep is a fitness platform fused with game mechanics, where you enter challenges with a small buy-in, contribute to a collective prize pool, and compete to earn your share simply by staying active.",
+      logo: "/partners/instep.png",
+      screenshot: "/projects/instep-screenshot.jpeg",
+      website: "https://instep.fit",
+      developer: {
+        name: "InStep Team",
+        website: "https://instep.fit",
+      },
+      tags: ["Fitness", "Gaming", "Mobile App", "Health"],
+      featured: true,
+    },
     {
       name: "Casino Royale",
       description:

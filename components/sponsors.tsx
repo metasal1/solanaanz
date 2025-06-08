@@ -106,32 +106,36 @@ export default function Sponsors() {
         </div>
         <div className="grid grid-cols-2 gap-8 mt-12 md:grid-cols-3 lg:grid-cols-5">
           {sponsors.map((sponsor) => (
-            <a key={sponsor.name} href={sponsor.url} target="_blank" rel="noopener noreferrer" className="group">
-              <div className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 bg-white dark:bg-gray-900 dark:shadow-none dark:hover:bg-gray-800 h-full transform group-hover:scale-105 flex flex-col items-center justify-center p-6">
-                {sponsor.logo ? (
-                  <div className="relative h-20 w-20 flex items-center justify-center mb-4 overflow-hidden rounded-full bg-gray-100 dark:bg-gray-800">
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-50 dark:to-gray-900 opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-full"></div>
-                    <Image
-                      src={sponsor.logo || "/placeholder.svg"}
-                      alt={`${sponsor.name} logo`}
-                      width={80}
-                      height={80}
-                      className="object-cover w-full h-full transition-all duration-500 filter grayscale group-hover:grayscale-0 group-hover:brightness-110"
-                    />
+            <a
+              key={sponsor.name}
+              href={sponsor.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col items-center justify-center p-6"
+            >
+              {sponsor.logo ? (
+                <div className="relative h-20 w-20 flex items-center justify-center mb-4 overflow-hidden rounded-full bg-gray-100 dark:bg-gray-800">
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-50 dark:to-gray-900 opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-full"></div>
+                  <Image
+                    src={sponsor.logo || "/placeholder.svg"}
+                    alt={`${sponsor.name} logo`}
+                    width={80}
+                    height={80}
+                    className="object-cover w-full h-full transition-all duration-500 filter grayscale group-hover:grayscale-0 group-hover:brightness-110"
+                  />
+                </div>
+              ) : (
+                <div className="relative h-20 w-20 flex items-center justify-center mb-4 overflow-hidden rounded-full bg-gray-100 dark:bg-gray-800">
+                  <div className="flex items-center justify-center h-full w-full">
+                    <span className="text-xl font-bold text-[#800080] dark:text-[#a64ca6]">
+                      {sponsor.name.charAt(0)}
+                    </span>
                   </div>
-                ) : (
-                  <div className="relative h-20 w-20 flex items-center justify-center mb-4 overflow-hidden rounded-full bg-gray-100 dark:bg-gray-800">
-                    <div className="flex items-center justify-center h-full w-full">
-                      <span className="text-xl font-bold text-[#800080] dark:text-[#a64ca6]">
-                        {sponsor.name.charAt(0)}
-                      </span>
-                    </div>
-                  </div>
-                )}
-                <h3 className="text-sm font-medium text-center mt-2 text-[#0000FF] dark:text-[#4d4dff] group-hover:text-[#800080] dark:group-hover:text-[#a64ca6] transition-colors duration-300">
-                  {sponsor.name}
-                </h3>
-              </div>
+                </div>
+              )}
+              <h3 className="text-sm font-medium text-center mt-2 text-[#0000FF] dark:text-[#4d4dff] group-hover:text-[#800080] dark:group-hover:text-[#a64ca6] transition-colors duration-300">
+                {sponsor.name}
+              </h3>
             </a>
           ))}
         </div>
