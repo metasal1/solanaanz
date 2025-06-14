@@ -97,15 +97,15 @@ export default function ProjectsShowcase() {
       successStory: true,
     },
     {
-      name: "Zeta Markets",
+      name: "Bullet.xyz",
       description:
-        "A leading derivatives platform on Solana offering options and futures trading. Zeta Markets provides institutional-grade derivatives trading with advanced risk management tools.",
-      website: "https://zeta.markets",
+        "Solana's trading layer (formerly Zeta Markets) - a leading derivatives platform offering options and futures trading. Bullet provides institutional-grade derivatives trading with advanced risk management tools and harnesses the power and security of the Solana network.",
+      website: "https://bullet.xyz",
       developer: {
-        name: "Zeta Markets Team",
-        website: "https://zeta.markets",
+        name: "Bullet Team",
+        website: "https://bullet.xyz",
       },
-      tags: ["DeFi", "Derivatives", "Options", "Futures"],
+      tags: ["DeFi", "Derivatives", "Options", "Futures", "Trading Layer"],
       featured: false,
       successStory: true,
     },
