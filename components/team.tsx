@@ -35,7 +35,7 @@ export default function Team() {
       location: "Auckland",
       image: "/craig-profile.jpeg",
       twitter: "https://x.com/craigmccoll_nz",
-      telegram: "https://t.me/supernz",
+      telegram: "https://t.me/super_nz",
     },
     {
       name: "Darren",
