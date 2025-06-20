@@ -40,7 +40,7 @@ export default function About() {
         </div>
         <div className="grid grid-cols-1 gap-8 mt-12 md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (
-            <Card key={index} className="border-0 shadow-sm dark:bg-gray-900 dark:shadow-none">
+            <Card key={index} className="modern-card border-0">
               <CardContent className="flex flex-col items-center space-y-4 p-6">
                 {feature.icon}
                 <h3 className="text-xl font-bold dark:text-white">{feature.title}</h3>

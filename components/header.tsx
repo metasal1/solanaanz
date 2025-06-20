@@ -32,7 +32,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white dark:bg-gray-950 dark:border-gray-800">
+    <header className="sticky top-0 z-50 w-full clean-nav">
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="flex items-center space-x-2">
@@ -49,7 +49,7 @@ export default function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium hover:text-[#800080] dark:text-gray-200 dark:hover:text-[#a64ca6]"
+              className="text-sm font-medium hover:text-[#800080] dark:text-gray-200 dark:hover:text-[#a64ca6] transition-colors"
             >
               {item.name}
             </Link>
@@ -75,7 +75,7 @@ export default function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium hover:text-[#800080] dark:text-gray-200 dark:hover:text-[#a64ca6]"
+                className="text-sm font-medium hover:text-[#800080] dark:text-gray-200 dark:hover:text-[#a64ca6] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}

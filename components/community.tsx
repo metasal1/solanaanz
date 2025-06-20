@@ -4,7 +4,7 @@ import { Twitter, Send } from "lucide-react"
 
 export default function Community() {
   return (
-    <section className="py-16 logo-gradient text-white">
+    <section className="py-16 modern-gradient text-white">
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
           <div className="flex flex-col justify-center space-y-4">

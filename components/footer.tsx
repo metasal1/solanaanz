@@ -76,7 +76,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="https://soldev.app" className="text-gray-400 hover:text-white">
+                <Link href="https://solana.stackexchange.com" className="text-gray-400 hover:text-white">
                   Solana Developers
                 </Link>
               </li>
