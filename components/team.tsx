@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card"
 import Image from "next/image"
-import { MapPin, Twitter, Send, Globe } from "lucide-react"
+import { MapPin, Twitter, Send, Globe, Linkedin } from "lucide-react"
 import Link from "next/link"
 
 type TeamMember = {
@@ -11,6 +11,7 @@ type TeamMember = {
   twitter?: string
   telegram?: string
   website?: string
+  linkedin?: string
 }
 
 export default function Team() {
@@ -22,6 +23,7 @@ export default function Team() {
       twitter: "https://x.com/metasal_",
       telegram: "https://t.me/metasal",
       website: "https://metasal.xyz",
+      linkedin: "https://www.linkedin.com/in/salsamani",
     },
     {
       name: "Adrian",
@@ -134,6 +136,17 @@ export default function Team() {
                     >
                       <Globe className="h-4 w-4" />
                       <span className="sr-only">Website</span>
+                    </Link>
+                  )}
+                  {member.linkedin && (
+                    <Link
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-500 hover:text-[#0077b5] dark:text-gray-400 dark:hover:text-[#0077b5] transition-colors"
+                    >
+                      <Linkedin className="h-4 w-4" />
+                      <span className="sr-only">LinkedIn</span>
                     </Link>
                   )}
                 </div>

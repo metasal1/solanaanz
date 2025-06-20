@@ -8,19 +8,19 @@ import SolPrice from "@/components/sol-price"
 import Sponsors from "@/components/sponsors"
 import Partners from "@/components/partners"
 import Team from "@/components/team"
-import BreakpointBanner from "@/components/breakpoint-banner"
-import BreakpointFeature from "@/components/breakpoint-feature"
+import EventBanner from "@/components/breakpoint-banner"
+import EventFeature from "@/components/breakpoint-feature"
 import AnzSolToken from "@/components/anzsol-token"
 import EventGallery from "@/components/event-gallery"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
-      <BreakpointBanner />
+      <EventBanner />
       <Header />
       <main>
         <Hero />
-        <BreakpointFeature />
+        <EventFeature />
         <SolPrice />
         <About />
         <AnzSolToken />
