@@ -19,7 +19,7 @@ export default function Footer() {
                 <span className="sr-only">Telegram</span>
               </Link>
               <Link href="https://github.com/solana-labs" className="text-gray-400 hover:text-white">
-                <Github className="h-5 w-5" />
+                
                 <span className="sr-only">GitHub</span>
               </Link>
               <Link href="https://www.linkedin.com/company/solanaanz" className="text-gray-400 hover:text-white">
