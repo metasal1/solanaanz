@@ -156,17 +156,16 @@ export default function ProjectsShowcase() {
       featured: true,
     },
     {
-      name: "Hey Hal",
+      name: "Klout",
       description:
-        "Your AI Solana sidekick on X (Twitter). Sign in with your X account, load SOL, and perform on-chain actions directly on the timeline including sending tokens, swapping, and more.",
-      logo: "/sponsors/heyhal.jpg",
-      screenshot: "/projects/heyhal-screenshot.jpeg",
-      website: "https://heyhal.xyz",
+        "A social platform built on Solana that connects users through Twitter/X integration. Klout provides a seamless social experience with crypto-native features and community engagement tools.",
+      logo: "/sponsors/klout.png",
+      website: "https://klout.gg",
       developer: {
-        name: "Hey Hal Team",
-        website: "https://heyhal.xyz",
+        name: "Klout Team",
+        website: "https://klout.gg",
       },
-      tags: ["AI", "Social", "Wallet", "Twitter Bot"],
+      tags: ["Social", "Twitter Integration", "Community", "Platform"],
       featured: true,
     },
     // Other Projects
@@ -328,7 +327,7 @@ export default function ProjectsShowcase() {
                           </Button>
                           <Button
                             variant="outline"
-                            className="border-green-600 text-green-600 hover:bg-green-600/10"
+                            className="border-green-600 text-green-600 hover:bg-green-600/10 bg-transparent"
                             asChild
                           >
                             <a
@@ -447,7 +446,7 @@ export default function ProjectsShowcase() {
                           </Button>
                           <Button
                             variant="outline"
-                            className="border-[#800080] text-[#800080] hover:bg-[#800080]/10 dark:border-[#a64ca6] dark:text-[#a64ca6] dark:hover:bg-[#a64ca6]/10"
+                            className="border-[#800080] text-[#800080] hover:bg-[#800080]/10 dark:border-[#a64ca6] dark:text-[#a64ca6] dark:hover:bg-[#a64ca6]/10 bg-transparent"
                             asChild
                           >
                             <a

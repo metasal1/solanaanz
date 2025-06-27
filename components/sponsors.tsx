@@ -51,9 +51,9 @@ export default function Sponsors() {
       logo: "/sponsors/orca.png",
     },
     {
-      name: "Hey Hal Wallet",
-      url: "https://heyhal.xyz",
-      logo: "/sponsors/heyhal.jpg",
+      name: "Klout",
+      url: "https://klout.gg",
+      logo: "/sponsors/klout.png",
     },
     {
       name: "Legion",
