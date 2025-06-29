@@ -57,6 +57,20 @@ export default function ProjectsShowcase() {
       successStory: true,
     },
     {
+      name: "Maple Finance",
+      description:
+        "A leading institutional DeFi lending platform providing secure, expert-led financial products for individuals and institutions. Maple offers undercollateralized loans and asset management solutions with a focus on institutional-grade risk management.",
+      screenshot: "/projects/maple-screenshot.jpeg",
+      website: "https://maple.finance",
+      developer: {
+        name: "Maple Finance Team",
+        website: "https://maple.finance",
+      },
+      tags: ["DeFi", "Lending", "Institutional", "Asset Management"],
+      featured: false,
+      successStory: true,
+    },
+    {
       name: "Magic Eden",
       description:
         "The leading NFT marketplace on Solana, facilitating billions in trading volume. Magic Eden has become the go-to platform for discovering, buying, and selling NFTs across multiple blockchains.",
