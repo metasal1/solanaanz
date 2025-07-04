@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Twitter, Send, Github, Phone, Mail, Globe, Linkedin, Facebook } from "lucide-react"
+import { Twitter, Send, Phone, Mail, Globe, Linkedin, Facebook } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -19,7 +19,6 @@ export default function Footer() {
                 <span className="sr-only">Telegram</span>
               </Link>
               <Link href="https://github.com/solana-labs" className="text-gray-400 hover:text-white">
-                
                 <span className="sr-only">GitHub</span>
               </Link>
               <Link href="https://www.linkedin.com/company/solanaanz" className="text-gray-400 hover:text-white">
@@ -38,6 +37,11 @@ export default function Footer() {
               <li>
                 <Link href="/projects" className="text-gray-400 hover:text-white">
                   Projects
+                </Link>
+              </li>
+              <li>
+                <Link href="/assets" className="text-gray-400 hover:text-white">
+                  Brand Assets
                 </Link>
               </li>
               <li>
