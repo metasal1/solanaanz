@@ -82,6 +82,30 @@ export default function AssetsPageClient() {
               </div>
             </div>
 
+            {/* Merchandise Designs */}
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold text-center mb-8 dark:text-white">Merchandise Designs</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <AssetCard
+                  title="anzSOL T-Shirt Design (PNG)"
+                  description="High-resolution PNG for merchandise printing"
+                  imageSrc="/assets/anzsol-tshirt.png"
+                  downloadName="anzsol-tshirt-design.png"
+                />
+                <AssetCard
+                  title="anzSOL T-Shirt Design (SVG)"
+                  description="Vector format for scalable merchandise"
+                  imageSrc="/assets/anzsol-tshirt.svg"
+                  downloadName="anzsol-tshirt-design.svg"
+                />
+              </div>
+              <div className="text-center mt-6">
+                <p className="text-muted-foreground dark:text-gray-400 text-sm">
+                  Perfect for t-shirts, hoodies, and other apparel featuring the anzSOL brand
+                </p>
+              </div>
+            </div>
+
             {/* Usage Guidelines */}
             <div className="mb-16">
               <h2 className="text-3xl font-bold text-center mb-8 dark:text-white">Usage Guidelines</h2>
