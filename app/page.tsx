@@ -12,6 +12,7 @@ import EventBanner from "@/components/breakpoint-banner"
 import EventFeature from "@/components/breakpoint-feature"
 import AnzSolToken from "@/components/anzsol-token"
 import EventGallery from "@/components/event-gallery"
+import CongratulationsPopup from "@/components/congratulations-popup"
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
         <Community />
       </main>
       <Footer />
+      <CongratulationsPopup />
     </div>
   )
 }
