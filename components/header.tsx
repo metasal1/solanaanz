@@ -21,14 +21,10 @@ export default function Header() {
   const navItems = [
     { name: "Home", href: "/" },
     { name: "Projects", href: "/projects" },
-    { name: "Airdrops", href: isHomePage ? "#airdrops" : "/#airdrops" },
     { name: "Partners", href: isHomePage ? "#partners" : "/#partners" },
     { name: "Team", href: isHomePage ? "#team" : "/#team" },
-    { name: "Merch", href: isHomePage ? "#merch" : "/#merch" },
-    { name: "FAQs", href: isHomePage ? "#faqs" : "/#faqs" },
     { name: "Events", href: isHomePage ? "#events" : "/#events" },
     { name: "Sponsors", href: isHomePage ? "#sponsors" : "/#sponsors" },
-    { name: "Contact", href: isHomePage ? "#contact" : "/#contact" },
   ]
 
   return (
