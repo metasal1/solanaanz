@@ -19,6 +19,9 @@ export default function KeyringHero() {
             Your Australian and New Zealand hub for all things Solana. Join our vibrant community of builders,
             developers, and enthusiasts.
           </p>
+          <p className="max-w-[600px] text-sm text-[#800080] dark:text-[#a64ca6] font-medium">
+            💎 Come back regularly to collect airdrops, gifts, and easter eggs from the Solana ANZ community!
+          </p>
           <div className="flex flex-col gap-2 min-[400px]:flex-row">
             <Button size="lg" className="modern-button text-white" asChild>
               <a href="https://t.me/solanaANZ" target="_blank" rel="noopener noreferrer">
