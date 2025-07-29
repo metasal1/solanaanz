@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Twitter, Send, Phone, Mail, Globe, Linkedin, Facebook } from "lucide-react"
+import { Twitter, Send, Phone, Mail, Globe, Linkedin, Facebook, Youtube } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -28,6 +28,10 @@ export default function Footer() {
               <Link href="https://www.facebook.com/solanaanz" className="text-gray-400 hover:text-white">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
+              </Link>
+              <Link href="https://www.youtube.com/@solanaANZ" className="text-gray-400 hover:text-white">
+                <Youtube className="h-5 w-5" />
+                <span className="sr-only">YouTube</span>
               </Link>
             </div>
           </div>
@@ -126,6 +130,12 @@ export default function Footer() {
                 <Facebook className="h-4 w-4 mr-2 text-gray-400" />
                 <a href="https://www.facebook.com/solanaanz" className="text-gray-400 hover:text-white">
                   facebook.com/solanaanz
+                </a>
+              </li>
+              <li className="flex items-center">
+                <Youtube className="h-4 w-4 mr-2 text-gray-400" />
+                <a href="https://www.youtube.com/@solanaANZ" className="text-gray-400 hover:text-white">
+                  youtube.com/@solanaANZ
                 </a>
               </li>
             </ul>
