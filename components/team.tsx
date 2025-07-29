@@ -28,6 +28,7 @@ export default function Team() {
     },
     {
       name: "Shane",
+      role: "Decentralized Creative Strategist",
       location: "Melbourne",
       image: "/shane-profile.jpeg",
       twitter: "https://x.com/hiddenhunting",
@@ -64,7 +65,7 @@ export default function Team() {
     },
     {
       name: "Ariel",
-      location: "Solana University",
+      location: "Melbourne",
       image: "/ariel-profile.jpeg",
       twitter: "https://x.com/ariel__sol",
       telegram: "https://t.me/ariel_jf",
