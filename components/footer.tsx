@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Twitter, Send, Phone, Mail, Globe, Linkedin, Facebook, Youtube } from "lucide-react"
+import { Twitter, Send, Phone, Mail, Globe, Linkedin, Facebook, Youtube, InstagramIcon as Tiktok } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -28,6 +28,10 @@ export default function Footer() {
               <Link href="https://www.facebook.com/solanaanz" className="text-gray-400 hover:text-white">
                 <Facebook className="h-5 w-5" />
                 <span className="sr-only">Facebook</span>
+              </Link>
+              <Link href="https://www.tiktok.com/@solanaanz" className="text-gray-400 hover:text-white">
+                <Tiktok className="h-5 w-5" />
+                <span className="sr-only">TikTok</span>
               </Link>
               <Link href="https://www.youtube.com/@solanaANZ" className="text-gray-400 hover:text-white">
                 <Youtube className="h-5 w-5" />
@@ -115,12 +119,6 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex items-center">
-                <Send className="h-4 w-4 mr-2 text-gray-400" />
-                <a href="https://t.me/solanaANZ" className="text-gray-400 hover:text-white">
-                  t.me/solanaANZ
-                </a>
-              </li>
-              <li className="flex items-center">
                 <Linkedin className="h-4 w-4 mr-2 text-gray-400" />
                 <a href="https://www.linkedin.com/company/solanaanz" className="text-gray-400 hover:text-white">
                   linkedin.com/company/solanaanz
@@ -130,6 +128,12 @@ export default function Footer() {
                 <Facebook className="h-4 w-4 mr-2 text-gray-400" />
                 <a href="https://www.facebook.com/solanaanz" className="text-gray-400 hover:text-white">
                   facebook.com/solanaanz
+                </a>
+              </li>
+              <li className="flex items-center">
+                <Tiktok className="h-4 w-4 mr-2 text-gray-400" />
+                <a href="https://www.tiktok.com/@solanaanz" className="text-gray-400 hover:text-white">
+                  tiktok.com/@solanaanz
                 </a>
               </li>
               <li className="flex items-center">
