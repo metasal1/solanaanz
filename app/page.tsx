@@ -12,10 +12,12 @@ import EventBanner from "@/components/breakpoint-banner"
 import EventFeature from "@/components/breakpoint-feature"
 import AnzSolToken from "@/components/anzsol-token"
 import EventGallery from "@/components/event-gallery"
+import HackarooBanner from "@/components/hackaroo-banner"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
+      <HackarooBanner />
       <EventBanner />
       <Header />
       <main>

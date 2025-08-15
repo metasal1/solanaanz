@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     icon: "/anz-logo.png",
     apple: "/anz-logo.png",
   },
-    generator: 'v0.dev'
+    generator: 'v0.app'
 }
 
 export default function RootLayout({

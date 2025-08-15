@@ -6,7 +6,7 @@ export default function EventBanner() {
     <div className="w-full bg-black py-2 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <Link
-          href="https://lu.ma/dj3lcvjr"
+          href="https://lu.ma/solanaANZ"
           target="_blank"
           rel="noopener noreferrer"
           className="group flex items-center justify-between"
