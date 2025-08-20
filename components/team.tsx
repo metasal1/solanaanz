@@ -20,9 +20,12 @@ export default function Team() {
     {
       name: "Johnny Forfar",
       role: "Co-founder",
-      location: "Melbourne",
+      location: "Global",
       image: "/johnny-profile.jpeg",
+      twitter: "https://x.com/johnforfar",
       telegram: "https://t.me/johnny_buidl",
+      website: "https://johnforfar.com",
+      linkedin: "https://www.linkedin.com/in/johnforfar/",
       inactive: true,
     },
     {
