@@ -12,6 +12,7 @@ type TeamMember = {
   telegram?: string
   website?: string
   linkedin?: string
+  inactive?: boolean
 }
 
 export default function Team() {
@@ -34,6 +35,14 @@ export default function Team() {
       twitter: "https://x.com/hiddenhunting",
       telegram: "https://t.me/hiddenhunting",
       linkedin: "https://www.linkedin.com/in/shane-mitropoulos-391a9948/",
+    },
+    {
+      name: "Johnny Forfar",
+      role: "Co-founder",
+      location: "Melbourne",
+      image: "/johnny-profile.jpeg",
+      telegram: "https://t.me/johnny_buidl",
+      inactive: true,
     },
     {
       name: "Adrian",
@@ -87,7 +96,9 @@ export default function Team() {
           {teamMembers.map((member) => (
             <Card
               key={member.name}
-              className="border-0 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 dark:bg-gray-900 dark:shadow-none dark:hover:bg-gray-800 h-full transform hover:scale-105"
+              className={`border-0 overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 dark:bg-gray-900 dark:shadow-none dark:hover:bg-gray-800 h-full transform hover:scale-105 ${
+                member.inactive ? "opacity-50 grayscale" : ""
+              }`}
             >
               <CardContent className="flex flex-col items-center justify-center p-6 h-full">
                 <div className="relative h-24 w-24 rounded-full overflow-hidden mb-4 bg-gray-100 dark:bg-gray-800 ring-2 ring-purple-500 dark:ring-purple-400">
@@ -106,9 +117,22 @@ export default function Team() {
                     </div>
                   )}
                 </div>
-                <h3 className="text-lg font-bold text-center logo-gradient-text">{member.name}</h3>
-                {member.role && <p className="text-sm text-muted-foreground dark:text-gray-400 mt-1">{member.role}</p>}
-                <div className="flex items-center mt-2 text-sm text-gray-500 dark:text-gray-400">
+                <h3
+                  className={`text-lg font-bold text-center ${member.inactive ? "text-gray-400" : "logo-gradient-text"}`}
+                >
+                  {member.name}
+                </h3>
+                {member.role && (
+                  <p
+                    className={`text-sm mt-1 ${member.inactive ? "text-gray-500" : "text-muted-foreground dark:text-gray-400"}`}
+                  >
+                    {member.role}
+                    {member.inactive && <span className="ml-2 text-xs">(Inactive)</span>}
+                  </p>
+                )}
+                <div
+                  className={`flex items-center mt-2 text-sm ${member.inactive ? "text-gray-500" : "text-gray-500 dark:text-gray-400"}`}
+                >
                   <MapPin className="h-3 w-3 mr-1" />
                   <span>{member.location}</span>
                 </div>
@@ -120,7 +144,11 @@ export default function Team() {
                       href={member.twitter}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-[#1DA1F2] dark:text-gray-400 dark:hover:text-[#1DA1F2] transition-colors"
+                      className={`transition-colors ${
+                        member.inactive
+                          ? "text-gray-400 hover:text-gray-300"
+                          : "text-gray-500 hover:text-[#1DA1F2] dark:text-gray-400 dark:hover:text-[#1DA1F2]"
+                      }`}
                     >
                       <Twitter className="h-4 w-4" />
                       <span className="sr-only">Twitter</span>
@@ -131,7 +159,11 @@ export default function Team() {
                       href={member.telegram}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-[#0088cc] dark:text-gray-400 dark:hover:text-[#0088cc] transition-colors"
+                      className={`transition-colors ${
+                        member.inactive
+                          ? "text-gray-400 hover:text-gray-300"
+                          : "text-gray-500 hover:text-[#0088cc] dark:text-gray-400 dark:hover:text-[#0088cc]"
+                      }`}
                     >
                       <Send className="h-4 w-4" />
                       <span className="sr-only">Telegram</span>
@@ -142,7 +174,11 @@ export default function Team() {
                       href={member.website}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-[#800080] dark:text-gray-400 dark:hover:text-[#a64ca6] transition-colors"
+                      className={`transition-colors ${
+                        member.inactive
+                          ? "text-gray-400 hover:text-gray-300"
+                          : "text-gray-500 hover:text-[#800080] dark:text-gray-400 dark:hover:text-[#a64ca6]"
+                      }`}
                     >
                       <Globe className="h-4 w-4" />
                       <span className="sr-only">Website</span>
@@ -153,7 +189,11 @@ export default function Team() {
                       href={member.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-[#0077b5] dark:text-gray-400 dark:hover:text-[#0077b5] transition-colors"
+                      className={`transition-colors ${
+                        member.inactive
+                          ? "text-gray-400 hover:text-gray-300"
+                          : "text-gray-500 hover:text-[#0077b5] dark:text-gray-400 dark:hover:text-[#0077b5]"
+                      }`}
                     >
                       <Linkedin className="h-4 w-4" />
                       <span className="sr-only">LinkedIn</span>
