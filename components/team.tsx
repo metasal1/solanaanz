@@ -18,6 +18,14 @@ type TeamMember = {
 export default function Team() {
   const teamMembers: TeamMember[] = [
     {
+      name: "Johnny Forfar",
+      role: "Co-founder",
+      location: "Melbourne",
+      image: "/johnny-profile.jpeg",
+      telegram: "https://t.me/johnny_buidl",
+      inactive: true,
+    },
+    {
       name: "Metasal",
       role: "Head of Australia",
       location: "Melbourne",
@@ -26,23 +34,6 @@ export default function Team() {
       telegram: "https://t.me/metasal",
       website: "https://metasal.xyz",
       linkedin: "https://www.linkedin.com/in/salsamani",
-    },
-    {
-      name: "Shane",
-      role: "Decentralized Creative Strategist",
-      location: "Melbourne",
-      image: "/shane-profile.jpeg",
-      twitter: "https://x.com/hiddenhunting",
-      telegram: "https://t.me/hiddenhunting",
-      linkedin: "https://www.linkedin.com/in/shane-mitropoulos-391a9948/",
-    },
-    {
-      name: "Johnny Forfar",
-      role: "Co-founder",
-      location: "Melbourne",
-      image: "/johnny-profile.jpeg",
-      telegram: "https://t.me/johnny_buidl",
-      inactive: true,
     },
     {
       name: "Adrian",
@@ -78,6 +69,15 @@ export default function Team() {
       image: "/ariel-profile.jpeg",
       twitter: "https://x.com/ariel__sol",
       telegram: "https://t.me/ariel_jf",
+    },
+    {
+      name: "Shane",
+      role: "Decentralized Creative Strategist",
+      location: "Melbourne",
+      image: "/shane-profile.jpeg",
+      twitter: "https://x.com/hiddenhunting",
+      telegram: "https://t.me/hiddenhunting",
+      linkedin: "https://www.linkedin.com/in/shane-mitropoulos-391a9948/",
     },
   ]
 
