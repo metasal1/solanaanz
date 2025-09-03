@@ -29,11 +29,6 @@ export default function Sponsors() {
       logo: "/sponsors/thesendcoin.jpg",
     },
     {
-      name: "Blinks.gg",
-      url: "https://blinks.gg",
-      logo: "/sponsors/blinksgg.jpg",
-    },
-    {
       name: "Supa Aggregator",
       url: "https://supa.ag",
       logo: "/sponsors/supa.jpeg",
@@ -44,11 +39,6 @@ export default function Sponsors() {
       logo: "/sponsors/cryptotaxcalculator.png",
       description: "Sort out your crypto tax nightmare with the most degen-friendly calculator in the space",
       deal: "20% off ALL CTC plans (first-year only). Use code ANZSOL at checkout!",
-    },
-    {
-      name: "Orca",
-      url: "https://orca.so",
-      logo: "/sponsors/orca.png",
     },
     {
       name: "Klout",
@@ -81,19 +71,9 @@ export default function Sponsors() {
       logo: "/sponsors/steaknet.jpg",
     },
     {
-      name: "Mtn Capital",
-      url: "https://mtncapital.xyz",
-      logo: "/partners/mtndao.jpg", // Using the same logo as MtnDAO
-    },
-    {
       name: "Menace Finance",
       url: "https://menace.finance",
       logo: "/sponsors/menace.jpg",
-    },
-    {
-      name: "Paragon.gdn",
-      url: "https://paragon.gdn",
-      logo: "/sponsors/paragon.jpg",
     },
   ]
 

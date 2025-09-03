@@ -50,7 +50,12 @@ export default function Partners() {
     {
       name: "InStep",
       url: "https://instep.fit",
-      logo: "/partners/instep.jpeg", // Changed from .png to .jpeg
+      logo: "/partners/instep.jpeg",
+    },
+    {
+      name: "Digital Economy Council of Australia",
+      url: "https://deca.org.au",
+      logo: "/partners/deca.png",
     },
   ]
 
