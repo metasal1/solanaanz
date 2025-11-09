@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Twitter, Send, Phone, Mail, Globe, Linkedin, Facebook, Youtube, InstagramIcon as Tiktok } from 'lucide-react'
+import { Twitter, Send, Phone, Mail, Globe, Linkedin, Facebook, Youtube, TicketIcon as Tiktok } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -70,6 +70,16 @@ export default function Footer() {
               <li>
                 <Link href="#" className="text-gray-400 hover:text-white">
                   FAQs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://hackaroo.xyz"
+                  className="text-gray-400 hover:text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Hackaroo
                 </Link>
               </li>
             </ul>

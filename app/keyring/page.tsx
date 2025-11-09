@@ -12,7 +12,6 @@ import EventFeature from "@/components/breakpoint-feature"
 import AnzSolToken from "@/components/anzsol-token"
 import EventGallery from "@/components/event-gallery"
 import KeyringHero from "@/components/keyring-hero"
-import HackarooBanner from "@/components/hackaroo-banner"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -23,7 +22,6 @@ export const metadata: Metadata = {
 export default function KeyringPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950">
-      <HackarooBanner />
       <EventBanner />
       <Header />
       <main>
