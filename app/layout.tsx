@@ -1,6 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import Script from "next/script"
 import "./globals.css"
 import { Analytics } from "@vercel/analytics/react"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -54,6 +55,11 @@ export default function RootLayout({
           <Suspense>{children}</Suspense>
         </ThemeProvider>
         <Analytics />
+        <Script
+          src="https://stats.sal.fun/script.js"
+          data-website-id="060c5fef-26c7-4c92-89e4-a4bbf3d1d96d"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   )
