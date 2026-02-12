@@ -58,6 +58,11 @@ export default function Sponsors() {
       url: "https://instep.fit",
       logo: "/partners/instep.jpeg",
     },
+    {
+      name: "SeekerTracker",
+      url: "https://seekertracker.com",
+      logo: "/sponsors/seekertracker.jpg",
+    },
   ]
 
   return (
