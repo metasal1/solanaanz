@@ -26,7 +26,21 @@ type Project = {
 
 export default function ProjectsShowcase() {
   const projects: Project[] = [
-    // Success Stories
+    // Success Stories - Venta and Legion moved to first and second
+    {
+      name: "Venta Pay",
+      description:
+        "A revolutionary sales and payment platform that has successfully eliminated friction in business transactions. Venta Pay has empowered sales teams across multiple industries to achieve higher conversion rates and streamlined payment processing on Solana.",
+      screenshot: "/projects/venta-screenshot.jpeg",
+      website: "https://venta.xyz",
+      developer: {
+        name: "Venta Team",
+        website: "https://venta.xyz",
+      },
+      tags: ["Payments", "Sales", "Business", "Fintech"],
+      featured: false,
+      successStory: true,
+    },
     {
       name: "Legion",
       description:
