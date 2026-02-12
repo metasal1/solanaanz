@@ -24,21 +24,6 @@ export default function Sponsors() {
       tags: ["Perpetuals", "Trading", "DeFi", "Leverage"],
     },
     {
-      name: "The Send Coin",
-      url: "https://thesendcoin.com",
-      logo: "/sponsors/thesendcoin.jpg",
-    },
-    {
-      name: "Supa Aggregator",
-      url: "https://supa.ag",
-      logo: "/sponsors/supa.jpeg",
-    },
-    {
-      name: "Crypto Tax Calculator",
-      url: "https://cryptotaxcalculator.io/?via=szdq6hjp",
-      logo: "/sponsors/cryptotaxcalculator.png",
-      description: "Sort out your crypto tax nightmare with the most degen-friendly calculator in the space",
-      deal: "20% off ALL CTC plans (first-year only). Use code ANZSOL at checkout!",
     },
     {
       name: "Klout",
@@ -52,7 +37,7 @@ export default function Sponsors() {
     },
     {
       name: "Solana Name Service",
-      url: "https://sns.id",
+      url: "https://www.sns.id/?affiliateRef=metasal",
       logo: "/sponsors/sns.jpg",
     },
     {
@@ -71,9 +56,9 @@ export default function Sponsors() {
       logo: "/sponsors/steaknet.jpg",
     },
     {
-      name: "Menace Finance",
-      url: "https://menace.finance",
-      logo: "/sponsors/menace.jpg",
+      name: "InStep",
+      url: "https://instep.fit",
+      logo: "/partners/instep.jpeg",
     },
   ]
 

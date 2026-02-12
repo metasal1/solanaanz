@@ -48,9 +48,9 @@ export default function Partners() {
       logo: "/partners/blueshift.jpeg",
     },
     {
-      name: "InStep",
-      url: "https://instep.fit",
-      logo: "/partners/instep.jpeg",
+      name: "Superteam Talent",
+      url: "https://talent.superteam.fun/join?scout=metasal_",
+      logo: "/partners/superteam-talent.jpg",
     },
     {
       name: "Digital Economy Council of Australia",
