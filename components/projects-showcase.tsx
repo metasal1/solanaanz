@@ -198,30 +198,42 @@ export default function ProjectsShowcase() {
       featured: false,
     },
     {
-      name: "Zeak Navigator",
+      name: "SeekerTracker",
       description:
-        "Power up your wallet and unlock the future with cutting-edge zkCompression technology. Manage compressed tokens effortlessly with fast, secure, and cost-effective solutions.",
-      logo: "/zn-logo-green-tech.png",
-      screenshot: "/projects/zeaknavigator-screenshot.jpeg",
-      website: "https://zeaknavigator.com",
+        "Track and search Solana Mobile Seeker devices and .skr SeekerIDs. Real-time data on the Seeker ecosystem with integrated $TRACKER token.",
+      logo: "/sponsors/seekertracker.jpg",
+      website: "https://seekertracker.com",
       developer: {
-        name: "Zeak Team",
-        website: "https://zeaknavigator.com",
+        name: "SeekerTracker Team",
+        website: "https://seekertracker.com",
       },
-      tags: ["Wallet", "zkCompression", "Tools"],
+      tags: ["Mobile", "Seeker", "Tools"],
       featured: false,
     },
     {
-      name: "Stables.fun",
+      name: "film.fun",
       description:
-        "A comprehensive stablecoin platform on Solana providing easy access to stable digital assets with advanced trading and management features for the ANZ market.",
-      logo: "/stables-finance-logo.png",
-      website: "https://stables.fun",
+        "AI film creation platform where creators compete, create and earn. Features brackets, community-driven storytelling, and crypto-native rewards.",
+      logo: "/projects/film-fun-logo.jpg",
+      website: "https://film.fun",
       developer: {
-        name: "Stables Team",
-        website: "https://stables.fun",
+        name: "film.fun Team",
+        website: "https://film.fun",
       },
-      tags: ["Stablecoins", "DeFi", "Trading"],
+      tags: ["AI", "Film", "Creator Economy"],
+      featured: false,
+    },
+    {
+      name: "HaveMore",
+      description:
+        "Simplifies institutional access to digital assets and yield. Bridging traditional finance with DeFi on Solana.",
+      logo: "/projects/havemore-logo.png",
+      website: "https://havemore.fi",
+      developer: {
+        name: "HaveMore Team",
+        website: "https://havemore.fi",
+      },
+      tags: ["Institutional", "DeFi", "Yield"],
       featured: false,
     },
   ]
