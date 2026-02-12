@@ -57,6 +57,11 @@ export default function Partners() {
       url: "https://deca.org.au",
       logo: "/partners/deca.png",
     },
+    {
+      name: "AusBuildooors",
+      url: "https://luma.com/AusBuildooors",
+      logo: "/partners/ausbuildooors.png",
+    },
   ]
 
   return (
