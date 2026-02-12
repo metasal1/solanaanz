@@ -37,7 +37,7 @@ export default function Sponsors() {
     },
     {
       name: "Solana Name Service",
-      url: "https://sns.id",
+      url: "https://www.sns.id/?affiliateRef=metasal",
       logo: "/sponsors/sns.jpg",
     },
     {
