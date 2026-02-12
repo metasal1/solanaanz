@@ -215,6 +215,180 @@ export default function ProjectsShowcase() {
       tags: ["Stablecoins", "DeFi", "Trading"],
       featured: false,
     },
+    {
+      name: "SeekerTracker",
+      description:
+        "Track and search Solana Mobile Seeker devices and .skr SeekerIDs. Real-time data on the Seeker ecosystem with integrated $TRACKER token.",
+      logo: "/sponsors/seekertracker.jpg",
+      website: "https://seekertracker.com",
+      developer: {
+        name: "SeekerTracker Team",
+        website: "https://seekertracker.com",
+      },
+      tags: ["Mobile", "Seeker", "Tools"],
+      featured: false,
+    },
+    {
+      name: "film.fun",
+      description:
+        "AI film creation platform where creators compete, create and earn. Features brackets, community-driven storytelling, and crypto-native rewards.",
+      logo: "/projects/film-fun-logo.jpg",
+      website: "https://film.fun",
+      developer: {
+        name: "film.fun Team",
+        website: "https://film.fun",
+      },
+      tags: ["AI", "Film", "Creator Economy"],
+      featured: false,
+    },
+    {
+      name: "HaveMore",
+      description:
+        "Building the web2.5 bridge to onchain tokenized finance. Simplifies institutional access to digital assets and yield.",
+      logo: "/projects/havemore-logo.png",
+      website: "https://havemore.fi",
+      developer: {
+        name: "HaveMore Team",
+        website: "https://havemore.fi",
+      },
+      tags: ["Institutional", "DeFi", "Yield"],
+      featured: false,
+    },
+    {
+      name: "Chest",
+      description:
+        "Gamify your Telegram group: pool, vote, and trade together. A social trading platform built on Solana.",
+      logo: "/projects/chest-logo.png",
+      website: "https://chest.chat",
+      developer: {
+        name: "Chest Team",
+        website: "https://chest.chat",
+      },
+      tags: ["Social", "Trading", "Telegram"],
+      featured: false,
+    },
+    {
+      name: "Watchtower",
+      description:
+        "Security monitoring and analytics platform for the Solana ecosystem. Stay informed and protect your assets.",
+      logo: "/projects/watchtower-logo.png",
+      website: "https://www.watchtower.world",
+      developer: {
+        name: "Watchtower Team",
+        website: "https://www.watchtower.world",
+      },
+      tags: ["Security", "Analytics", "Tools"],
+      featured: false,
+    },
+    {
+      name: "EVO",
+      description:
+        "Health and fitness app powered by Solana. Track your fitness journey with crypto-native rewards and community challenges.",
+      logo: "/projects/evoapp-logo.png",
+      website: "https://evoapp.xyz",
+      developer: {
+        name: "EVO Team",
+        website: "https://evoapp.xyz",
+      },
+      tags: ["Health", "Fitness", "Move-to-Earn"],
+      featured: false,
+    },
+    {
+      name: "SeekerNova",
+      description:
+        "A decentralized application built for the Solana Mobile Seeker ecosystem.",
+      website: "https://seekernova.com",
+      developer: {
+        name: "SeekerNova Team",
+        website: "https://seekernova.com",
+      },
+      tags: ["Mobile", "Seeker", "DApp"],
+      featured: false,
+    },
+    {
+      name: "WordPunt",
+      description:
+        "Word game with a crypto twist. Compete against other players in word puzzles and earn rewards.",
+      website: "https://wordpunt.com",
+      developer: {
+        name: "WordPunt Team",
+        website: "https://wordpunt.com",
+      },
+      tags: ["Gaming", "Words", "Casual"],
+      featured: false,
+    },
+    {
+      name: "CargoEscrow",
+      description:
+        "Decentralized escrow solution for cargo and logistics on Solana. Secure, transparent trade settlements.",
+      website: "https://cargoescrow.com",
+      developer: {
+        name: "CargoEscrow Team",
+        website: "https://cargoescrow.com",
+      },
+      tags: ["Logistics", "Escrow", "Trade"],
+      featured: false,
+    },
+    {
+      name: "SolAIBot",
+      description:
+        "AI-powered trading and analytics bot for the Solana ecosystem.",
+      website: "https://solaibot.com",
+      developer: {
+        name: "Quantailz",
+        website: "https://solaibot.com",
+      },
+      tags: ["AI", "Trading", "Bot"],
+      featured: false,
+    },
+    {
+      name: "Newsi",
+      description:
+        "Curated news and updates for the Solana ecosystem, keeping you informed on the latest developments.",
+      website: "https://newsi.com",
+      developer: {
+        name: "Newsi Team",
+        website: "https://newsi.com",
+      },
+      tags: ["News", "Media", "Information"],
+      featured: false,
+    },
+    {
+      name: "Vau1t",
+      description:
+        "Secure vault and asset management solution built on Solana.",
+      website: "https://vau1t.com",
+      developer: {
+        name: "Vau1t Team",
+        website: "https://vau1t.com",
+      },
+      tags: ["Security", "Vault", "Asset Management"],
+      featured: false,
+    },
+    {
+      name: "Nextgame",
+      description:
+        "Next-generation gaming platform on Solana. Discover and play blockchain games.",
+      website: "https://nextgame.com",
+      developer: {
+        name: "Nextgame Team",
+        website: "https://nextgame.com",
+      },
+      tags: ["Gaming", "Platform"],
+      featured: false,
+    },
+    {
+      name: "ZPEi",
+      description:
+        "Zero-point energy innovation platform building on Solana.",
+      website: "https://zpei.com",
+      developer: {
+        name: "ZPEi Team",
+        website: "https://zpei.com",
+      },
+      tags: ["Innovation", "Platform"],
+      featured: false,
+    },
   ]
 
   const successStories = projects.filter((project) => project.successStory)
