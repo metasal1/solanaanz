@@ -24,9 +24,6 @@ export default function Sponsors() {
       tags: ["Perpetuals", "Trading", "DeFi", "Leverage"],
     },
     {
-      name: "Supa Aggregator",
-      url: "https://supa.ag",
-      logo: "/sponsors/supa.jpeg",
     },
     {
       name: "Crypto Tax Calculator",
