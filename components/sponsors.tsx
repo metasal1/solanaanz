@@ -56,11 +56,6 @@ export default function Sponsors() {
       logo: "/sponsors/steaknet.jpg",
     },
     {
-      name: "Menace Finance",
-      url: "https://menace.finance",
-      logo: "/sponsors/menace.jpg",
-    },
-    {
       name: "InStep",
       url: "https://instep.fit",
       logo: "/partners/instep.jpeg",
