@@ -24,11 +24,6 @@ export default function Sponsors() {
       tags: ["Perpetuals", "Trading", "DeFi", "Leverage"],
     },
     {
-      name: "The Send Coin",
-      url: "https://thesendcoin.com",
-      logo: "/sponsors/thesendcoin.jpg",
-    },
-    {
       name: "Supa Aggregator",
       url: "https://supa.ag",
       logo: "/sponsors/supa.jpeg",
