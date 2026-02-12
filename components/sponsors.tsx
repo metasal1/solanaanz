@@ -70,11 +70,6 @@ export default function Sponsors() {
       url: "https://steak.net",
       logo: "/sponsors/steaknet.jpg",
     },
-    {
-      name: "Menace Finance",
-      url: "https://menace.finance",
-      logo: "/sponsors/menace.jpg",
-    },
   ]
 
   return (
