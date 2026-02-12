@@ -29,11 +29,6 @@ export default function Sponsors() {
       logo: "/sponsors/thesendcoin.jpg",
     },
     {
-      name: "Supa Aggregator",
-      url: "https://supa.ag",
-      logo: "/sponsors/supa.jpeg",
-    },
-    {
       name: "Crypto Tax Calculator",
       url: "https://cryptotaxcalculator.io/?via=szdq6hjp",
       logo: "/sponsors/cryptotaxcalculator.png",
