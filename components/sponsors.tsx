@@ -34,13 +34,6 @@ export default function Sponsors() {
       logo: "/sponsors/supa.jpeg",
     },
     {
-      name: "Crypto Tax Calculator",
-      url: "https://cryptotaxcalculator.io/?via=szdq6hjp",
-      logo: "/sponsors/cryptotaxcalculator.png",
-      description: "Sort out your crypto tax nightmare with the most degen-friendly calculator in the space",
-      deal: "20% off ALL CTC plans (first-year only). Use code ANZSOL at checkout!",
-    },
-    {
       name: "Klout",
       url: "https://klout.gg",
       logo: "/sponsors/klout.png",
