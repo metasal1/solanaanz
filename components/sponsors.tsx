@@ -24,8 +24,6 @@ export default function Sponsors() {
       tags: ["Perpetuals", "Trading", "DeFi", "Leverage"],
     },
     {
-    },
-    {
       name: "Klout",
       url: "https://klout.gg",
       logo: "/sponsors/klout.png",
