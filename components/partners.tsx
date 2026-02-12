@@ -53,6 +53,11 @@ export default function Partners() {
       logo: "/partners/instep.jpeg",
     },
     {
+      name: "Superteam Talent",
+      url: "https://talent.superteam.fun/join?scout=metasal_",
+      logo: "/partners/superteam-talent.jpg",
+    },
+    {
       name: "Digital Economy Council of Australia",
       url: "https://deca.org.au",
       logo: "/partners/deca.png",
