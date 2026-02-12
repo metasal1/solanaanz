@@ -7,7 +7,6 @@ type Project = {
   name: string
   description: string
   logo?: string
-  screenshot?: string
   website: string
   developer: {
     name: string
@@ -32,7 +31,6 @@ export default function ProjectsShowcase() {
       description:
         "The place where the best projects go to raise capital from the highest value community members at all stages of a project. Proudly built on Solana.",
       logo: "/sponsors/legion.jpg",
-      screenshot: "/projects/legion-screenshot.jpeg",
       website: "https://legion.cc",
       developer: {
         name: "Legion Team",
@@ -46,7 +44,6 @@ export default function ProjectsShowcase() {
       name: "Maple Finance",
       description:
         "A leading institutional DeFi lending platform providing secure, expert-led financial products for individuals and institutions. Maple offers undercollateralized loans and asset management solutions with a focus on institutional-grade risk management.",
-      screenshot: "/projects/maple-screenshot.jpeg",
       website: "https://maple.finance",
       developer: {
         name: "Maple Finance Team",
@@ -60,7 +57,6 @@ export default function ProjectsShowcase() {
       name: "Magic Eden",
       description:
         "The leading NFT marketplace on Solana, facilitating billions in trading volume. Magic Eden has become the go-to platform for discovering, buying, and selling NFTs across multiple blockchains.",
-      screenshot: "/projects/magiceden-screenshot.jpeg",
       website: "https://magiceden.io",
       developer: {
         name: "Magic Eden Team",
@@ -115,7 +111,6 @@ export default function ProjectsShowcase() {
       description:
         "A mobile app that transforms everyday walking into an engaging adventure. InStep is a fitness platform fused with game mechanics, where you enter challenges with a small buy-in, contribute to a collective prize pool, and compete to earn your share simply by staying active.",
       logo: "/partners/instep.jpeg",
-      screenshot: "/projects/instep-screenshot.jpeg",
       website: "https://instep.fit",
       developer: {
         name: "InStep Team",
@@ -129,7 +124,6 @@ export default function ProjectsShowcase() {
       description:
         "A fully on-chain casino gaming platform built on Solana, featuring pixelated retro-style games including poker, blackjack, and roulette with provably fair gameplay.",
       logo: "/projects/casino-royale-logo.png",
-      screenshot: "/projects/casino-royale-website.jpeg",
       website: "https://www.casinoroyalesol.io/",
       developer: {
         name: "Obelisk Protocol",
@@ -174,7 +168,6 @@ export default function ProjectsShowcase() {
       description:
         "The ultimate Solana token creator platform featuring an automated pump bot. Create and launch tokens effortlessly with advanced tools and Telegram integration.",
       logo: "/sponsors/supa.jpeg",
-      screenshot: "/projects/supapump-screenshot.jpeg",
       website: "https://supapump.fun",
       developer: {
         name: "Supa Aggregator",
@@ -188,7 +181,6 @@ export default function ProjectsShowcase() {
       description:
         "A revolutionary social app that focuses on emotions and feelings rather than likes. Snap a selfie to find your aura and connect with others based on authentic emotional experiences.",
       logo: "/sponsors/aurascope.jpg",
-      screenshot: "/projects/aurascope-screenshot.jpeg",
       website: "https://aurascopeapp.com",
       developer: {
         name: "Aurascope Team",
@@ -202,7 +194,6 @@ export default function ProjectsShowcase() {
       description:
         "Power up your wallet and unlock the future with cutting-edge zkCompression technology. Manage compressed tokens effortlessly with fast, secure, and cost-effective solutions.",
       logo: "/zn-logo-green-tech.png",
-      screenshot: "/projects/zeaknavigator-screenshot.jpeg",
       website: "https://zeaknavigator.com",
       developer: {
         name: "Zeak Team",
@@ -343,15 +334,6 @@ export default function ProjectsShowcase() {
                         </div>
                       </div>
                     </div>
-                    {project.screenshot && (
-                      <div className="relative h-64 overflow-hidden bg-gray-100 dark:bg-gray-700">
-                        <Image
-                          src={project.screenshot || "/placeholder.svg"}
-                          alt={`${project.name} screenshot`}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
                     )}
                   </div>
                 </Card>
@@ -462,15 +444,6 @@ export default function ProjectsShowcase() {
                         </div>
                       </div>
                     </div>
-                    {project.screenshot && (
-                      <div className="relative h-64 md:h-auto overflow-hidden bg-gray-100 dark:bg-gray-700">
-                        <Image
-                          src={project.screenshot || "/placeholder.svg"}
-                          alt={`${project.name} screenshot`}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
                     )}
                   </div>
                 </Card>
