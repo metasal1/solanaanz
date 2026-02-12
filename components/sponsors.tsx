@@ -75,6 +75,11 @@ export default function Sponsors() {
       url: "https://menace.finance",
       logo: "/sponsors/menace.jpg",
     },
+    {
+      name: "InStep",
+      url: "https://instep.fit",
+      logo: "/partners/instep.jpeg",
+    },
   ]
 
   return (
