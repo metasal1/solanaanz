@@ -164,19 +164,6 @@ export default function ProjectsShowcase() {
     },
     // Other Projects
     {
-      name: "SupaPump.fun",
-      description:
-        "The ultimate Solana token creator platform featuring an automated pump bot. Create and launch tokens effortlessly with advanced tools and Telegram integration.",
-      logo: "/sponsors/supa.jpeg",
-      website: "https://supapump.fun",
-      developer: {
-        name: "Supa Aggregator",
-        website: "https://supa.ag",
-      },
-      tags: ["Token Creator", "DeFi", "Tools"],
-      featured: false,
-    },
-    {
       name: "Aurascope",
       description:
         "A revolutionary social app that focuses on emotions and feelings rather than likes. Snap a selfie to find your aura and connect with others based on authentic emotional experiences.",
@@ -187,32 +174,6 @@ export default function ProjectsShowcase() {
         website: "https://aurascopeapp.com",
       },
       tags: ["Social", "AI", "Mobile App"],
-      featured: false,
-    },
-    {
-      name: "Zeak Navigator",
-      description:
-        "Power up your wallet and unlock the future with cutting-edge zkCompression technology. Manage compressed tokens effortlessly with fast, secure, and cost-effective solutions.",
-      logo: "/zn-logo-green-tech.png",
-      website: "https://zeaknavigator.com",
-      developer: {
-        name: "Zeak Team",
-        website: "https://zeaknavigator.com",
-      },
-      tags: ["Wallet", "zkCompression", "Tools"],
-      featured: false,
-    },
-    {
-      name: "Stables.fun",
-      description:
-        "A comprehensive stablecoin platform on Solana providing easy access to stable digital assets with advanced trading and management features for the ANZ market.",
-      logo: "/stables-finance-logo.png",
-      website: "https://stables.fun",
-      developer: {
-        name: "Stables Team",
-        website: "https://stables.fun",
-      },
-      tags: ["Stablecoins", "DeFi", "Trading"],
       featured: false,
     },
     {
@@ -306,18 +267,6 @@ export default function ProjectsShowcase() {
       featured: false,
     },
     {
-      name: "WordPunt",
-      description:
-        "Word game with a crypto twist. Compete against other players in word puzzles and earn rewards.",
-      website: "https://wordpunt.com",
-      developer: {
-        name: "WordPunt Team",
-        website: "https://wordpunt.com",
-      },
-      tags: ["Gaming", "Words", "Casual"],
-      featured: false,
-    },
-    {
       name: "CargoEscrow",
       description:
         "Decentralized escrow solution for cargo and logistics on Solana. Secure, transparent trade settlements.",
@@ -342,18 +291,6 @@ export default function ProjectsShowcase() {
       featured: false,
     },
     {
-      name: "Newsi",
-      description:
-        "Curated news and updates for the Solana ecosystem, keeping you informed on the latest developments.",
-      website: "https://newsi.com",
-      developer: {
-        name: "Newsi Team",
-        website: "https://newsi.com",
-      },
-      tags: ["News", "Media", "Information"],
-      featured: false,
-    },
-    {
       name: "Vau1t",
       description:
         "Secure vault and asset management solution built on Solana.",
@@ -375,18 +312,6 @@ export default function ProjectsShowcase() {
         website: "https://nextgame.com",
       },
       tags: ["Gaming", "Platform"],
-      featured: false,
-    },
-    {
-      name: "ZPEi",
-      description:
-        "Zero-point energy innovation platform building on Solana.",
-      website: "https://zpei.com",
-      developer: {
-        name: "ZPEi Team",
-        website: "https://zpei.com",
-      },
-      tags: ["Innovation", "Platform"],
       featured: false,
     },
   ]
