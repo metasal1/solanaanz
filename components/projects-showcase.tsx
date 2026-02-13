@@ -508,7 +508,6 @@ export default function ProjectsShowcase() {
                         </div>
                       </div>
                     </div>
-                    )}
                   </div>
                 </Card>
               ))}
@@ -618,7 +617,6 @@ export default function ProjectsShowcase() {
                         </div>
                       </div>
                     </div>
-                    )}
                   </div>
                 </Card>
               ))}
