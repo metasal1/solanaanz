@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { getAnzSOLStats, getSwapQuote, lamportsToSOL, formatAPY, solToLamports, type AnzSOLStats, type SwapQuote } from '@/lib/sanctum';
-import { ArrowDown, TrendingUp, Users, Wallet, ExternalLink } from 'lucide-react';
+import { getAnzSOLStats, getSwapQuote, lamportsToSOL, solToLamports, type AnzSOLStats, type SwapQuote } from '@/lib/sanctum';
+import { ArrowDown, Users, Wallet, ExternalLink } from 'lucide-react';
 
 export default function SwapPageClient() {
   const [stats, setStats] = useState<AnzSOLStats | null>(null);
@@ -46,7 +46,6 @@ export default function SwapPageClient() {
   }
 
   const tvlSOL = stats ? lamportsToSOL(stats.tvl).toFixed(2) : '—';
-  const avgApyFormatted = stats ? formatAPY(stats.avgApy) : '—';
   const outputAmount = quote ? lamportsToSOL(quote.outAmt).toFixed(6) : '—';
 
   return (
@@ -63,7 +62,7 @@ export default function SwapPageClient() {
         </div>
 
         {/* Live Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-2xl mx-auto">
           <Card className="p-6">
             <div className="flex items-center justify-between mb-2">
               <span className="text-gray-600 dark:text-gray-400 text-sm font-medium">Total Value Locked</span>
@@ -74,19 +73,6 @@ export default function SwapPageClient() {
             </div>
             <div className="text-sm text-gray-500 mt-1">
               ${loading ? '...' : (parseFloat(tvlSOL) * 200).toFixed(0)}
-            </div>
-          </Card>
-
-          <Card className="p-6">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-gray-600 dark:text-gray-400 text-sm font-medium">Average APY</span>
-              <TrendingUp className="w-5 h-5 text-green-500" />
-            </div>
-            <div className="text-3xl font-bold text-gray-900 dark:text-white">
-              {loading ? '...' : `${avgApyFormatted}%`}
-            </div>
-            <div className="text-sm text-gray-500 mt-1">
-              Staking rewards
             </div>
           </Card>
 
