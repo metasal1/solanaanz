@@ -145,7 +145,7 @@ export default function SwapPageClient() {
           )}
 
           {/* Wallet Connection Buttons */}
-          <div className="space-y-3">
+          <div id="wallets" className="space-y-3">
             <p className="text-sm font-medium text-gray-700 dark:text-gray-300 text-center mb-3">
               Connect wallet to swap
             </p>

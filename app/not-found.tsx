@@ -71,7 +71,7 @@ export default function NotFound() {
                 Events
               </Link>
               <Link 
-                href="/lst" 
+                href="/lst#wallets" 
                 className="text-[#2400FF] hover:text-[#800080] dark:text-[#a64ca6] dark:hover:text-[#FF0000] transition-colors font-medium"
               >
                 anzSOL
