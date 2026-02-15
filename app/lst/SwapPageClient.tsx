@@ -152,7 +152,11 @@ export default function SwapPageClient() {
             
             {/* Phantom */}
             <button
-              onClick={() => window.open('https://phantom.app/ul/browse/https://solanaanz.org/lst?autoConnect=phantom', '_blank')}
+              onClick={() => {
+                const url = encodeURIComponent('https://solanaanz.org/lst');
+                const ref = encodeURIComponent('https://solanaanz.org');
+                window.open(`https://phantom.app/ul/browse/${url}?ref=${ref}`, '_blank');
+              }}
               className="w-full py-4 px-4 bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white rounded-lg font-semibold flex items-center justify-center gap-3 transition-all"
             >
               <svg className="w-6 h-6" viewBox="0 0 128 128" fill="none">
@@ -163,7 +167,11 @@ export default function SwapPageClient() {
 
             {/* Solflare */}
             <button
-              onClick={() => window.open('https://solflare.com/ul/v1/browse/https://solanaanz.org/lst', '_blank')}
+              onClick={() => {
+                const url = encodeURIComponent('https://solanaanz.org/lst');
+                const ref = encodeURIComponent('https://solanaanz.org');
+                window.open(`https://solflare.com/ul/v1/browse/${url}?ref=${ref}`, '_blank');
+              }}
               className="w-full py-4 px-4 bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white rounded-lg font-semibold flex items-center justify-center gap-3 transition-all"
             >
               <svg className="w-6 h-6" viewBox="0 0 512 512" fill="currentColor">
@@ -174,7 +182,11 @@ export default function SwapPageClient() {
 
             {/* Backpack */}
             <button
-              onClick={() => window.open('https://backpack.app/browse/https://solanaanz.org/lst', '_blank')}
+              onClick={() => {
+                const url = encodeURIComponent('https://solanaanz.org/lst');
+                const ref = encodeURIComponent('https://solanaanz.org');
+                window.open(`https://backpack.app/ul/v1/browse/${url}?ref=${ref}`, '_blank');
+              }}
               className="w-full py-4 px-4 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white rounded-lg font-semibold flex items-center justify-center gap-3 transition-all"
             >
               <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
