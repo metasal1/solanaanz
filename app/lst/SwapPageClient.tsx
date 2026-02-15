@@ -194,18 +194,6 @@ export default function SwapPageClient() {
               </svg>
               Open in Backpack
             </button>
-
-            {/* Jupiter */}
-            <button
-              onClick={() => window.open('https://jup.ag/swap/SOL-ANZvHuXQh5DnBMzJ55MUyMtPxkdphgBwiPeYji2B3kxS', '_blank')}
-              className="w-full py-4 px-4 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white rounded-lg font-semibold flex items-center justify-center gap-3 transition-all"
-            >
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 6v12M6 12h12" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-              </svg>
-              Swap on Jupiter
-            </button>
           </div>
 
           <p className="text-xs text-gray-500 text-center mt-4">
