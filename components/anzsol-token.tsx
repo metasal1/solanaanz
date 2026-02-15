@@ -63,8 +63,8 @@ export default function AnzSolToken() {
                   className="w-full bg-[#800080] hover:bg-[#6a006a] dark:bg-[#a64ca6] dark:hover:bg-[#bf7fbf]"
                   asChild
                 >
-                  <a href="https://app.sanctum.so/anzSOL" target="_blank" rel="noopener noreferrer">
-                    Buy anzSOL on Sanctum
+                  <a href="/lst">
+                    Swap SOL for anzSOL
                   </a>
                 </Button>
               </div>

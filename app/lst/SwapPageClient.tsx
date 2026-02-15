@@ -3,8 +3,8 @@
 import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { getAnzSOLStats, getSwapQuote, lamportsToSOL, formatAPY, solToLamports, type AnzSOLStats, type SwapQuote } from '@/lib/sanctum';
-import { ArrowDown, TrendingUp, Users, Wallet, ExternalLink } from 'lucide-react';
+import { getAnzSOLStats, getSwapQuote, lamportsToSOL, solToLamports, type AnzSOLStats, type SwapQuote } from '@/lib/sanctum';
+import { ArrowDown, Users, Wallet, ExternalLink } from 'lucide-react';
 
 export default function SwapPageClient() {
   const [stats, setStats] = useState<AnzSOLStats | null>(null);
@@ -46,7 +46,6 @@ export default function SwapPageClient() {
   }
 
   const tvlSOL = stats ? lamportsToSOL(stats.tvl).toFixed(2) : '—';
-  const avgApyFormatted = stats ? formatAPY(stats.avgApy) : '—';
   const outputAmount = quote ? lamportsToSOL(quote.outAmt).toFixed(6) : '—';
 
   return (
@@ -63,7 +62,7 @@ export default function SwapPageClient() {
         </div>
 
         {/* Live Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-2xl mx-auto">
           <Card className="p-6">
             <div className="flex items-center justify-between mb-2">
               <span className="text-gray-600 dark:text-gray-400 text-sm font-medium">Total Value Locked</span>
@@ -74,19 +73,6 @@ export default function SwapPageClient() {
             </div>
             <div className="text-sm text-gray-500 mt-1">
               ${loading ? '...' : (parseFloat(tvlSOL) * 200).toFixed(0)}
-            </div>
-          </Card>
-
-          <Card className="p-6">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-gray-600 dark:text-gray-400 text-sm font-medium">Average APY</span>
-              <TrendingUp className="w-5 h-5 text-green-500" />
-            </div>
-            <div className="text-3xl font-bold text-gray-900 dark:text-white">
-              {loading ? '...' : `${avgApyFormatted}%`}
-            </div>
-            <div className="text-sm text-gray-500 mt-1">
-              Staking rewards
             </div>
           </Card>
 
@@ -158,10 +144,57 @@ export default function SwapPageClient() {
             </div>
           )}
 
-          {/* Connect Wallet Button */}
-          <Button className="w-full py-6 text-lg font-semibold bg-gradient-to-r from-blue-600 to-green-400 hover:from-blue-700 hover:to-green-500">
-            Connect Wallet
-          </Button>
+          {/* Wallet Connection Buttons */}
+          <div className="space-y-3">
+            <p className="text-sm font-medium text-gray-700 dark:text-gray-300 text-center mb-3">
+              Connect wallet to swap
+            </p>
+            
+            {/* Phantom */}
+            <button
+              onClick={() => window.open('https://phantom.app/ul/browse/https://solanaanz.org/lst?autoConnect=phantom', '_blank')}
+              className="w-full py-4 px-4 bg-gradient-to-r from-purple-600 to-purple-500 hover:from-purple-700 hover:to-purple-600 text-white rounded-lg font-semibold flex items-center justify-center gap-3 transition-all"
+            >
+              <svg className="w-6 h-6" viewBox="0 0 128 128" fill="none">
+                <path d="M93.937 47.592c-5.87-7.548-16.82-8.996-24.367-3.127L50.125 60.27c-1.81 1.405-4.367 1.083-5.772-.725-1.405-1.81-1.083-4.368.725-5.773l19.445-15.805c10.695-8.33 26.165-6.48 34.495 4.215 8.33 10.695 6.48 26.166-4.215 34.496L62.168 103.77c-10.695 8.33-26.166 6.48-34.496-4.215-8.33-10.695-6.48-26.165 4.215-34.495l8.33-6.48" stroke="currentColor" strokeWidth="8" strokeLinecap="round"/>
+              </svg>
+              Open in Phantom
+            </button>
+
+            {/* Solflare */}
+            <button
+              onClick={() => window.open('https://solflare.com/ul/v1/browse/https://solanaanz.org/lst', '_blank')}
+              className="w-full py-4 px-4 bg-gradient-to-r from-orange-600 to-orange-500 hover:from-orange-700 hover:to-orange-600 text-white rounded-lg font-semibold flex items-center justify-center gap-3 transition-all"
+            >
+              <svg className="w-6 h-6" viewBox="0 0 512 512" fill="currentColor">
+                <path d="M256 512c141.385 0 256-114.615 256-256S397.385 0 256 0 0 114.615 0 256s114.615 256 256 256zm-79.69-357.03c3.688-4.188 8.875-6.595 14.376-6.595h158.628c10.406 0 15.938 12.5 9.063 20.469l-79.69 90.625c-3.688 4.188-8.875 6.594-14.375 6.594H105.684c-10.406 0-15.938-12.5-9.063-20.469l79.69-90.624zm0 191.374c3.688-4.187 8.875-6.594 14.376-6.594h158.628c10.406 0 15.938 12.5 9.063 20.469l-79.69 90.625c-3.688 4.188-8.875 6.594-14.375 6.594H105.684c-10.406 0-15.938-12.5-9.063-20.469l79.69-90.625z"/>
+              </svg>
+              Open in Solflare
+            </button>
+
+            {/* Backpack */}
+            <button
+              onClick={() => window.open('https://backpack.app/browse/https://solanaanz.org/lst', '_blank')}
+              className="w-full py-4 px-4 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-700 hover:to-red-600 text-white rounded-lg font-semibold flex items-center justify-center gap-3 transition-all"
+            >
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+              </svg>
+              Open in Backpack
+            </button>
+
+            {/* Jupiter */}
+            <button
+              onClick={() => window.open('https://jup.ag/swap/SOL-ANZvHuXQh5DnBMzJ55MUyMtPxkdphgBwiPeYji2B3kxS', '_blank')}
+              className="w-full py-4 px-4 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-700 hover:to-green-600 text-white rounded-lg font-semibold flex items-center justify-center gap-3 transition-all"
+            >
+              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v12M6 12h12" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+              </svg>
+              Swap on Jupiter
+            </button>
+          </div>
 
           <p className="text-xs text-gray-500 text-center mt-4">
             Manager fee: {stats?.managerFeeConfig.withholdRate ? (stats.managerFeeConfig.withholdRate * 100).toFixed(1) : 2.5}%
