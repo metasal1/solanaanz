@@ -180,6 +180,18 @@ export default function SwapPageClient() {
           <p className="text-xs text-gray-500 text-center mt-4">
             Manager fee: {stats?.managerFeeConfig.withholdRate ? (stats.managerFeeConfig.withholdRate * 100).toFixed(1) : 2.5}%
           </p>
+
+          {/* Supported Wallets */}
+          <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
+            <p className="text-xs text-gray-500 dark:text-gray-400 text-center mb-3">
+              Supported wallets
+            </p>
+            <div className="flex justify-center gap-4">
+              <img src="/wallet-icons/phantom.svg" alt="Phantom" className="w-6 h-6 opacity-70 hover:opacity-100 transition-opacity" title="Phantom" />
+              <img src="/wallet-icons/solflare.svg" alt="Solflare" className="w-6 h-6 opacity-70 hover:opacity-100 transition-opacity" title="Solflare" />
+              <img src="/wallet-icons/backpack.svg" alt="Backpack" className="w-6 h-6 opacity-70 hover:opacity-100 transition-opacity" title="Backpack" />
+            </div>
+          </div>
         </Card>
 
         {/* Info Section */}
