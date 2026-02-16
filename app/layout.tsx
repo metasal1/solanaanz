@@ -5,6 +5,7 @@ import Script from "next/script"
 import "./globals.css"
 import { Analytics } from "@vercel/analytics/react"
 import { ThemeProvider } from "@/components/theme-provider"
+import { WalletContextProvider } from "@/components/wallet-provider"
 import { Suspense } from "react"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -52,7 +53,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange={false}>
-          <Suspense>{children}</Suspense>
+          <WalletContextProvider>
+            <Suspense>{children}</Suspense>
+          </WalletContextProvider>
         </ThemeProvider>
         <Analytics />
         <Script
