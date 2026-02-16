@@ -6,7 +6,6 @@ import { WalletModalProvider } from '@solana/wallet-adapter-react-ui';
 import { 
   PhantomWalletAdapter,
   SolflareWalletAdapter,
-  BackpackWalletAdapter,
 } from '@solana/wallet-adapter-wallets';
 import { clusterApiUrl } from '@solana/web3.js';
 
@@ -16,12 +15,12 @@ export const WalletContextProvider: FC<{ children: ReactNode }> = ({ children })
   // Use mainnet-beta
   const endpoint = useMemo(() => clusterApiUrl('mainnet-beta'), []);
 
-  // Supported wallets: Phantom, Solflare, Backpack
+  // Supported wallets: Phantom, Solflare
+  // Note: Backpack not included - adapter not available in @solana/wallet-adapter-wallets
   const wallets = useMemo(
     () => [
       new PhantomWalletAdapter(),
       new SolflareWalletAdapter(),
-      new BackpackWalletAdapter(),
     ],
     []
   );
