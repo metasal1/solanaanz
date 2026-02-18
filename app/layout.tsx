@@ -63,6 +63,19 @@ export default function RootLayout({
           data-website-id="060c5fef-26c7-4c92-89e4-a4bbf3d1d96d"
           strategy="afterInteractive"
         />
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-KT2HKZ9CZB"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-KT2HKZ9CZB');
+          `}
+        </Script>
       </body>
     </html>
   )
